@@ -1,5 +1,6 @@
 "use client";
 
+import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Loader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
@@ -31,9 +32,10 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-gradient-to-br from-amber-400 via-orange-400 to-black animate-grad-xy">
+    <div className="flex flex-col items-center justify-center w-full">
       <Navbar />
       <Hero />
+      <About />
     </div>
   );
 }

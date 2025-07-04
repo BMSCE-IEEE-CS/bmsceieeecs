@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="scroll-smooth" lang="en">
       <body
         className={`${montserrat} antialiased bg-gradient-to-br from-amber-500 via-orange-400 to-black animate-grad-xy`}
       >
