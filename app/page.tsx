@@ -2,6 +2,7 @@
 
 import Hero from "@/components/Hero";
 import Loader from "@/components/Loader";
+import Navbar from "@/components/Navbar";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
   if (loading) {
     return (
       <div
-        className={`flex flex-col w-full min-h-screen items-center justify-center transition-opacity duration-500 ${
+        className={`flex flex-col w-full min-h-screen items-center bg-gray-800 justify-center transition-opacity duration-500 ${
           fadeOut ? "opacity-0" : "opacity-100"
         }`}
       >
@@ -30,7 +31,8 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center px-4 w-full">
+    <div className="flex flex-col items-center justify-center w-full bg-gradient-to-br from-amber-400 via-orange-400 to-black animate-grad-xy">
+      <Navbar />
       <Hero />
     </div>
   );

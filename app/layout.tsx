@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat} antialiased`}>{children}</body>
+      <body
+        className={`${montserrat} antialiased bg-gradient-to-br from-amber-500 via-orange-400 to-black animate-grad-xy`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
