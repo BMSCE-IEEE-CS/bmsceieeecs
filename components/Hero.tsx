@@ -6,7 +6,7 @@ import { FaArrowDown } from "react-icons/fa";
 const Hero = () => {
   return (
     <div className="flex flex-col animate-grad-xy min-h-screen w-full items-center justify-center px-4">
-      <div className="flex flex-col md:flex-row items-center justify-center w-3/4 gap-6">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center w-3/4 gap-6">
         <p className="text-justify">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
           numquam eveniet voluptatum. Labore debitis deleniti, veniam maxime
@@ -20,7 +20,7 @@ const Hero = () => {
           dolorum culpa atque accusamus id exercitationem.
         </p>
         <Image
-          className="w-3/4 md:w-1/2 p-4 rounded-2xl bg-white shadow-xl hover:shadow-2xl"
+          className="w-full md:w-1/2 p-4 rounded-2xl bg-white shadow-xl hover:shadow-2xl"
           src="/images/bmsceieeecsblack.png"
           width={500}
           height={500}
