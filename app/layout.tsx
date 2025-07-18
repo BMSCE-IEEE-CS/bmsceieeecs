@@ -6,7 +6,7 @@ const montserrat = Montserrat({ subsets: ["cyrillic"] });
 
 export const metadata: Metadata = {
   title: "BMSCE IEEE Computer Society",
-  description: "",
+  description: "Official website of BMSCE IEEE Computer Society",
 };
 
 export default function RootLayout({
