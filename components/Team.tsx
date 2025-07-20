@@ -3,7 +3,13 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const teamData = {
+interface TeamMemberProp {
+  name: string;
+  desig: string;
+  image: string;
+}
+
+const teamData: Record<number, TeamMemberProp[]> = {
   "2021": [
     {
       name: "Nandita Mahendra",
