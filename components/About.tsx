@@ -25,7 +25,7 @@ const About = () => {
     <div id="about" className="w-full md:w-5/6 py-20 px-4">
       <div className="flex flex-col items-center justify-center w-full">
         <h1 className="text-orange-400 text-4xl font-bold">About Us</h1>
-        <h1 className="bg-black/50 text-gray-200 rounded-2xl font-medium p-8 mt-10 text-lg">
+        <h1 className="bg-black/50 text-gray-200 rounded-2xl font-medium p-8 mt-10 text-lg text-justify">
           Engaging engineers from various streams along with scientists and
           industry professionals from all the areas of computing, BMSCE IEEE
           Computer Society sets the standard for education and engagement that

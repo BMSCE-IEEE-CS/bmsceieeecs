@@ -5,6 +5,7 @@ import Loader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
 import { useEffect, useState } from "react";
 import About from "@/components/About";
+import Team from "@/components/Team";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +37,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Team />
     </div>
   );
 }
