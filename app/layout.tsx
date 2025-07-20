@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["cyrillic"] });
+const font = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BMSCE IEEE Computer Society",
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <body
-        className={`${montserrat} antialiased bg-gradient-to-br from-amber-500 via-orange-400 to-black animate-grad-xy`}
+        className={`${font.className} antialiased bg-gradient-to-br text-white from-slate-600 via-gray-700 to-slate-900 animate-grad-xy`}
       >
         {children}
       </body>

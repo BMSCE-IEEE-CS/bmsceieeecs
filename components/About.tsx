@@ -1,68 +1,58 @@
-"use client";
+import { FaBullseye } from "react-icons/fa6";
+import { MdVisibility } from "react-icons/md";
+import { RiFlagLine } from "react-icons/ri";
 
-import React, { useEffect, useState, useRef } from "react";
-import { useInView } from "framer-motion";
-
-interface StatComponentProp {
-  value: number;
-  text: string;
-  duration?: number;
+interface AboutComponentProps {
+  title: string;
+  description: string;
+  icon: React.ReactElement;
 }
 
-const StatComponent = ({ value, text, duration = 2000 }: StatComponentProp) => {
-  const [stat, setStat] = useState(0);
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (!inView) return;
-
-    let current = 0;
-    const increment = Math.ceil(value / (duration / 30));
-    const interval = setInterval(() => {
-      current += increment;
-      if (current >= value) {
-        current = value;
-        clearInterval(interval);
-      }
-      setStat(current);
-    }, 30);
-
-    return () => clearInterval(interval);
-  }, [inView, value, duration]);
-
+const AboutComponent = ({ title, description, icon }: AboutComponentProps) => {
   return (
-    <div
-      ref={ref}
-      className="bg-black/50 flex flex-col items-center px-8 py-4 rounded-xl"
-    >
-      <h1 className="font-black text-3xl text-white">{stat}+</h1>
-      <p className="text-xl text-gray-300">{text}</p>
+    <div className="flex flex-col items-center justify-center bg-black/50 p-8 rounded-2xl">
+      <div className="text-5xl">{icon}</div>
+      <h1 className="mt-4 text-3xl font-semibold">{title}</h1>
+      <p className="text-justify mt-2 text-gray-200 font-medium text-lg">
+        {description}
+      </p>
     </div>
   );
 };
 
 const About = () => {
   return (
-    // <div id="about" className="w-3/4 md:w-2/3 py-20">
-    //   <div className="bg-black/25 px-8 py-4 rounded-xl">
-    //     <p className="text-white">
-    //       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur,
-    //       repudiandae aperiam fugiat id vero autem, nemo delectus consequuntur
-    //       minima et laborum quae recusandae est tempore incidunt quaerat omnis
-    //       hic! Consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing
-    //       elit. Accusamus autem nostrum soluta nesciunt dolorum repellendus
-    //       atque sint minus ullam rerum totam quod tempora animi, vero dolorem
-    //       quas accusantium porro corporis.
-    //     </p>
-    //   </div>
-    // </div>
-
-    <div id="about" className="w-full py-20">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center justify-center w-3/4 mx-auto">
-        <StatComponent value={1084} text="Members" />
-        <StatComponent value={70} text="Events" />
-        <StatComponent value={6} text="Prestigious Awards" />
+    <div id="about" className="w-full md:w-5/6 py-20 px-4">
+      <div className="flex flex-col items-center justify-center w-full">
+        <h1 className="text-orange-400 text-4xl font-bold">About Us</h1>
+        <h1 className="bg-black/50 text-gray-200 rounded-2xl font-medium p-8 mt-10 text-lg">
+          Engaging engineers from various streams along with scientists and
+          industry professionals from all the areas of computing, BMSCE IEEE
+          Computer Society sets the standard for education and engagement that
+          fuels continued technological advancement. Through workshops,
+          hackathons, codeathons, and by bringing together computer science and
+          engineering students at every phase of their career for dialogue,
+          debate and collaboration, BMSCE IEEE Computer Society empowers,
+          shapes, and guides the future of not only its members, but the greater
+          industry, enabling new opportunities to serve our world better.
+        </h1>
+        <div className="grid md:grid-cols-3 gap-4 mt-4 w-full">
+          <AboutComponent
+            icon={<MdVisibility />}
+            title="Vision"
+            description="To grow into a premier technical society, fostering eminent professionals with creative minds, innovative ideas and sound practical skills, team spirit and true leadership qualities, and to shape a future where technology works for the man's enrichment."
+          />
+          <AboutComponent
+            icon={<FaBullseye />}
+            title="Mission"
+            description="Providing individuals with state-of-the-art knowledge in various technological disciplines and instilling within them a strong sense of social consciousness and professionalism and enabling them to face life's challenges with courage and conviction."
+          />
+          <AboutComponent
+            icon={<RiFlagLine />}
+            title="Objective"
+            description="The society's broad objective of being an active agent of change by responding to the needs and challenges of the current environment. These challenges can be overcome by training, working as a team and inculcating leadership qualities within."
+          />
+        </div>
       </div>
     </div>
   );

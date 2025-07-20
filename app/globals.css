@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --animate-grad-xy: gradient-xy 7s ease infinite;
+  --animate-grad-xy: gradient-xy 4s ease infinite;
   --animate-spin-slow: spin-slow 20s linear infinite;
 
   @keyframes gradient-xy {
