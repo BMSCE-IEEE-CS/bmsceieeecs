@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="relative flex flex-col animate-grad-xy min-h-screen w-full items-center justify-center px-4 py-20">
       <div className="flex flex-col">
         <div className="flex flex-col-reverse md:flex-row items-center justify-center max-w-6xl w-full gap-8">
-          <p className="text-justify text-sm sm:text-base leading-relaxed md:w-1/2">
+          <p className="text-justify text-sm sm:text-lg md:w-1/2">
             BMSCE IEEE Computer Society, started in 2021, saw more than 400
             participants enrolling in the first year itself. The chapter has
             since then worked together to enhance and upskill the technical
