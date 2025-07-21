@@ -30,7 +30,6 @@ const Hero = () => {
         <Stat />
       </div>
 
-      {/* Scroll Arrow to #about */}
       <Link
         href="#about"
         className="absolute bottom-6 animate-bounce p-3 rounded-full bg-white text-black hover:shadow-xl transition"
