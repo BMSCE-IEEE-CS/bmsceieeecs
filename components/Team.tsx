@@ -382,7 +382,7 @@ const Team = () => {
   return (
     <div className="py-20 px-4">
       <div className="flex flex-col items-center justify-center w-full">
-        <h1 className="text-orange-400 text-4xl font-bold mb-10">
+        <h1 className="text-orange-400 text-4xl md:text-5xl font-bold mb-10">
           Meet the Team
         </h1>
 
@@ -424,7 +424,7 @@ const Team = () => {
 
         {yearData?.sac && (
           <>
-            <h2 className="text-2xl font-bold text-orange-400 mt-10">SAC</h2>
+            <h2 className="text-3xl font-bold text-orange-400 mt-10">SAC</h2>
             <div className="flex flex-wrap justify-center items-start gap-6 w-full mt-4">
               {yearData.sac.map((member, idx) => (
                 <TeamComponent
