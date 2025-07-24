@@ -1,6 +1,9 @@
+import { Montserrat } from "next/font/google";
 import { FaBullseye } from "react-icons/fa6";
 import { MdVisibility } from "react-icons/md";
 import { RiFlagLine } from "react-icons/ri";
+
+const title = Montserrat({ subsets: ["latin"] });
 
 interface AboutComponentProps {
   title: string;
@@ -22,7 +25,9 @@ const About = () => {
   return (
     <div id="about" className="w-full md:w-5/6 py-20 px-4">
       <div className="flex flex-col items-center justify-center w-full">
-        <h1 className="text-orange-400 text-4xl md:text-5xl font-bold">
+        <h1
+          className={`${title.className} text-orange-400 text-4xl md:text-5xl font-bold`}
+        >
           About Us
         </h1>
         <h1 className="bg-black/50 text-gray-200 rounded-2xl p-8 mt-10 text-lg text-justify">

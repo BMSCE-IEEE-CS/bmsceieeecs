@@ -1,5 +1,8 @@
+import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
+
+const title = Montserrat({ subsets: ["latin"] });
 
 const Initiatives = () => {
   return (
@@ -8,7 +11,9 @@ const Initiatives = () => {
       className="w-full md:w-5/6 flex flex-col items-center py-20 px-4"
     >
       <div className="w-full flex flex-col items-center justify-center">
-        <h1 className="text-3xl md:text-5xl font-bold text-orange-400">
+        <h1
+          className={`${title.className} text-3xl md:text-5xl font-bold text-orange-400`}
+        >
           Initiatives
         </h1>
 

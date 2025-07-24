@@ -2,11 +2,17 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import localFont from "next/font/local";
+import { Montserrat } from "next/font/google";
 
-interface TeamMemberProp {
+// const font = localFont({ src: "../app/berlinsans.ttf" });
+
+const title = Montserrat({ subsets: ["latin"] });
+
+interface TeamComponentProps {
+  image: string;
   name: string;
   desig: string;
-  image: string;
 }
 
 interface TeamCatProps {
@@ -345,12 +351,6 @@ const teamData: Record<number, TeamCatProps[]> = {
   ],
 };
 
-interface TeamComponentProps {
-  image: string;
-  name: string;
-  desig: string;
-}
-
 const TeamComponent = ({ image, name, desig }: TeamComponentProps) => {
   return (
     <div
@@ -382,8 +382,10 @@ const Team = () => {
   return (
     <div className="py-20 px-4">
       <div className="flex flex-col items-center justify-center w-full">
-        <h1 className="text-orange-400 text-4xl md:text-5xl font-bold mb-10">
-          Meet the Team
+        <h1
+          className={`${title.className} text-orange-400 text-4xl md:text-5xl mb-10 font-bold`}
+        >
+          Executive Committee
         </h1>
 
         <TeamComponent
@@ -408,8 +410,12 @@ const Team = () => {
 
         {yearData?.execom && (
           <>
-            <h2 className="text-3xl font-bold text-orange-400 mt-10">Execom</h2>
-            <div className="flex flex-wrap justify-center items-start gap-6 w-full mt-4">
+            <h2
+              className={`${title.className} text-3xl text-orange-400 text-center mt-10 font-bold`}
+            >
+              Core Committee
+            </h2>
+            <div className="flex flex-wrap justify-center items-start gap-6 w-full mt-6">
               {yearData.execom.map((member, idx) => (
                 <TeamComponent
                   key={`execom-${member.name}-${idx}`}
@@ -424,8 +430,12 @@ const Team = () => {
 
         {yearData?.sac && (
           <>
-            <h2 className="text-3xl font-bold text-orange-400 mt-10">SAC</h2>
-            <div className="flex flex-wrap justify-center items-start gap-6 w-full mt-4">
+            <h2
+              className={`${title.className} text-3xl text-orange-400 text-center mt-14 font-bold`}
+            >
+              Student Activities Committee Coordinators
+            </h2>
+            <div className="flex flex-wrap justify-center items-start gap-6 w-full mt-6">
               {yearData.sac.map((member, idx) => (
                 <TeamComponent
                   key={`sac-${member.name}-${idx}`}
