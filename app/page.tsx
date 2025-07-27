@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import About from "@/components/About";
 import Team from "@/components/Team";
 import Initiatives from "@/components/Initiatives";
+import Beam from "@/components/bg/utils/Beam/Beam";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -34,7 +35,8 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center w-full">
+    <div className="relative flex flex-col items-center justify-center w-full overflow-hidden">
+      <Beam />
       <Navbar />
       <Hero />
       <About />

@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import localFont from "next/font/local";
 import { Montserrat } from "next/font/google";
+import { FaLinkedin } from "react-icons/fa6";
+import Link from "next/link";
 
 // const font = localFont({ src: "../app/berlinsans.ttf" });
 
@@ -13,6 +15,7 @@ interface TeamComponentProps {
   image: string;
   name: string;
   desig: string;
+  linkedinLink?: string;
 }
 
 interface TeamCatProps {
@@ -28,11 +31,14 @@ const teamData: Record<number, TeamCatProps[]> = {
           name: "Nandita Mahendra",
           desig: "Chairperson",
           image: "/images/people/2021/nandita.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/nandita-mahendra-6117431b9/",
         },
         {
           name: "Abhinandan Udupa",
           desig: "Secretary",
           image: "/images/people/2021/abhinandan.png",
+          linkedinLink: "https://www.linkedin.com/in/abhinandan-u-bb35481b2/",
         },
       ],
     },
@@ -44,31 +50,39 @@ const teamData: Record<number, TeamCatProps[]> = {
           name: "Supriya P G",
           desig: "Chairperson",
           image: "/images/people/2022/supriya.png",
+          linkedinLink: "https://www.linkedin.com/in/supriya-p-g/",
         },
         {
           name: "Kalp Dantewadia",
           desig: "Vice Chairperson",
           image: "/images/people/2022/kalp.png",
+          linkedinLink: "https://www.linkedin.com/in/kalp-jain/",
         },
         {
           name: "Pradyun Naik",
           desig: "Treasurer",
           image: "/images/people/2022/pradyun.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/pradyun-naik-amey-b1b2601b9/",
         },
         {
           name: "Harshitha Aparna",
           desig: "Secretary",
           image: "/images/people/2022/harshitha.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/harshitha-aparna-8b4845209/",
         },
         {
           name: "Rajath V",
           desig: "Joint Secretary",
           image: "/images/people/2022/rajath.png",
+          linkedinLink: "https://www.linkedin.com/in/rajathv23/",
         },
         {
           name: "Tuhina Bagchi",
           desig: "Senior SAC",
           image: "/images/people/2022/tuhina.png",
+          linkedinLink: "https://www.linkedin.com/in/tuhina-b-1019b3212/",
         },
       ],
       sac: [
@@ -76,41 +90,51 @@ const teamData: Record<number, TeamCatProps[]> = {
           name: "Disha Naik",
           desig: "SAC",
           image: "/images/people/2023/disha.png",
+          linkedinLink: "https://www.linkedin.com/in/dishannaik/",
         },
         {
           name: "Dyuthi B V",
           desig: "SAC",
           image: "/images/people/2023/dyuthi.png",
+          linkedinLink: "https://www.linkedin.com/in/dyuthi-b-v-612435222/",
         },
         {
           name: "Harshala Rani",
           desig: "SAC",
-          image: "/images/people/placeholder.png",
+          image: "/images/people/2023/harshala.png",
+          linkedinLink: "https://www.linkedin.com/in/harshala-rani-a26880244/",
         },
         {
           name: "Jyothiprakash Panda",
           desig: "SAC",
           image: "/images/people/2023/jp.png",
+          linkedinLink: "https://www.linkedin.com/in/jyotiprakashp/",
         },
         {
           name: "Om Patil",
           desig: "SAC",
           image: "/images/people/2023/om.png",
+          linkedinLink: "https://www.linkedin.com/in/om-patil/",
         },
         {
           name: "Priyanshu Dhasmana",
           desig: "SAC",
           image: "/images/people/2023/priyanshu.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/priyanshu-dhasmana-b7a12b1b6/",
         },
         {
           name: "Rahul Shirur",
           desig: "SAC",
-          image: "/images/people/placeholder.png",
+          image: "/images/people/2023/rahul.png",
+          linkedinLink: "https://www.linkedin.com/in/rahul-shirur-ab2a40247/",
         },
         {
           name: "Vaishnavi Acharya",
           desig: "SAC",
-          image: "/images/people/placeholder.png",
+          image: "/images/people/2023/vaishnavi.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/vaishnavi-acharya-027072236/",
         },
       ],
     },
@@ -122,26 +146,32 @@ const teamData: Record<number, TeamCatProps[]> = {
           name: "Dyuthi B V",
           desig: "Chairperson",
           image: "/images/people/2023/dyuthi.png",
+          linkedinLink: "https://www.linkedin.com/in/dyuthi-b-v-612435222/",
         },
         {
           name: "Priyanshu Dhasmana",
           desig: "Vice Chairperson",
           image: "/images/people/2023/priyanshu.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/priyanshu-dhasmana-b7a12b1b6/",
         },
         {
           name: "Om Patil",
           desig: "Treasurer",
           image: "/images/people/2023/om.png",
+          linkedinLink: "https://www.linkedin.com/in/om-patil/",
         },
         {
           name: "Jyothiprakash Panda",
           desig: "Secretary",
           image: "/images/people/2023/jp.png",
+          linkedinLink: "https://www.linkedin.com/in/jyotiprakashp/",
         },
         {
           name: "Disha Naik",
           desig: "Joint Secretary",
           image: "/images/people/2023/disha.png",
+          linkedinLink: "https://www.linkedin.com/in/dishannaik/",
         },
       ],
       sac: [
@@ -149,41 +179,51 @@ const teamData: Record<number, TeamCatProps[]> = {
           name: "Aneesh K P",
           desig: "SAC",
           image: "/images/people/2024/aneesh.png",
+          linkedinLink: "https://www.linkedin.com/in/aneesh-k-p-394a71259/",
         },
         {
           name: "Dheemanth G Athreya",
           desig: "SAC",
           image: "/images/people/2024/dheemanth.png",
+          linkedinLink: "https://www.linkedin.com/in/dheemanth-athreya/",
         },
         {
           name: "M B Prajwal",
           desig: "SAC",
           image: "/images/people/2024/prajwal.png",
+          linkedinLink: "https://www.linkedin.com/in/m-b-prajwal/",
         },
         {
           name: "Manjari Joshi",
           desig: "SAC",
           image: "/images/people/2024/manjari.png",
+          linkedinLink: "https://www.linkedin.com/in/manjjoshi/",
         },
         {
           name: "Sanjana Shetty",
           desig: "SAC",
           image: "/images/people/2024/sanjana.png",
+          linkedinLink: "https://www.linkedin.com/in/sanjana-shetty-b77163212/",
         },
         {
           name: "Shreya P",
           desig: "SAC",
           image: "/images/people/2024/shreya.png",
+          linkedinLink: "https://www.linkedin.com/in/shreya-p-270b03244/",
         },
         {
           name: "Sneha N Shastri",
           desig: "SAC",
           image: "/images/people/2024/sneha.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/sneha-n-shastri-b37299257/",
         },
         {
           name: "Tulasikrishna Tammina",
           desig: "SAC",
           image: "/images/people/2024/tk.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/tulasikrishna-tammina-20849924a/",
         },
       ],
     },
@@ -195,36 +235,45 @@ const teamData: Record<number, TeamCatProps[]> = {
           name: "Dheemanth G Athreya",
           desig: "Chairperson",
           image: "/images/people/2024/dheemanth.png",
+          linkedinLink: "https://www.linkedin.com/in/dheemanth-athreya/",
         },
         {
           name: "Tulasikrishna Tammina",
           desig: "Vice Chairperson",
           image: "/images/people/2024/tk.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/tulasikrishna-tammina-20849924a/",
         },
         {
           name: "M B Prajwal",
           desig: "Treasurer",
           image: "/images/people/2024/prajwal.png",
+          linkedinLink: "https://www.linkedin.com/in/m-b-prajwal/",
         },
         {
           name: "Manjari Joshi",
           desig: "Secretary",
           image: "/images/people/2024/manjari.png",
+          linkedinLink: "https://www.linkedin.com/in/manjjoshi/",
         },
         {
           name: "Sanjana Shetty",
           desig: "Joint Secretary",
           image: "/images/people/2024/sanjana.png",
+          linkedinLink: "https://www.linkedin.com/in/sanjana-shetty-b77163212/",
         },
         {
           name: "Aneesh K P",
           desig: "Technical Lead",
           image: "/images/people/2024/aneesh.png",
+          linkedinLink: "https://www.linkedin.com/in/aneesh-k-p-394a71259/",
         },
         {
           name: "Sneha N Shastri",
           desig: "Technical Lead",
           image: "/images/people/2024/sneha.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/sneha-n-shastri-b37299257/",
         },
       ],
       sac: [
@@ -232,41 +281,52 @@ const teamData: Record<number, TeamCatProps[]> = {
           name: "Anushree Shetty",
           desig: "SAC",
           image: "/images/people/2025/anushree.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/anushree-shetty-a7882a23b/",
         },
         {
           name: "B Sai Sahithi",
           desig: "SAC",
           image: "/images/people/2025/sahithi.png",
+          linkedinLink: "https://www.linkedin.com/in/bsaisahithi/",
         },
         {
           name: "Nandan M N",
           desig: "SAC",
           image: "/images/people/2025/nandan.png",
+          linkedinLink: "https://www.linkedin.com/in/nandan-m-n-3143102b9/",
         },
         {
           name: "Pranati A P",
           desig: "SAC",
           image: "/images/people/2025/pranati.png",
+          linkedinLink: "https://www.linkedin.com/in/pranati-a-p-207343293/",
         },
         {
           name: "Pranav Kiran Kumar",
           desig: "SAC",
           image: "/images/people/2025/pranav.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/pranav-kiran-kumar-7a417029a/",
         },
         {
           name: "Rishika Nayana Shakthi",
           desig: "SAC",
           image: "/images/people/2025/rishika.png",
+          linkedinLink: "https://www.linkedin.com/in/rishika-nayana-shakthi/",
         },
         {
           name: "Tanisha Prakash",
           desig: "SAC",
           image: "/images/people/2025/tanisha.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/tanisha-prakash-78a644312/",
         },
         {
           name: "Vageesh G N",
           desig: "SAC",
           image: "/images/people/2025/vageesh.png",
+          linkedinLink: "https://www.linkedin.com/in/vageeshgn/",
         },
       ],
     },
@@ -278,31 +338,39 @@ const teamData: Record<number, TeamCatProps[]> = {
           name: "Vageesh G N",
           desig: "Chairperson",
           image: "/images/people/2025/vageesh.png",
+          linkedinLink: "https://www.linkedin.com/in/vageeshgn/",
         },
         {
           name: "B Sai Sahithi",
           desig: "Vice Chairperson",
           image: "/images/people/2025/sahithi.png",
+          linkedinLink: "https://www.linkedin.com/in/bsaisahithi/",
         },
         {
           name: "Rishika Nayana Shakthi",
           desig: "Treasurer",
           image: "/images/people/2025/rishika.png",
+          linkedinLink: "https://www.linkedin.com/in/rishika-nayana-shakthi/",
         },
         {
           name: "Anushree Shetty",
           desig: "Secretary",
           image: "/images/people/2025/anushree.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/anushree-shetty-a7882a23b/",
         },
         {
           name: "Nandan M N",
           desig: "Joint Secretary",
           image: "/images/people/2025/nandan.png",
+          linkedinLink: "https://www.linkedin.com/in/nandan-m-n-3143102b9/",
         },
         {
           name: "Tanisha Prakash",
           desig: "Joint Secretary",
           image: "/images/people/2025/tanisha.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/tanisha-prakash-78a644312/",
         },
       ],
       sac: [
@@ -351,24 +419,32 @@ const teamData: Record<number, TeamCatProps[]> = {
   ],
 };
 
-const TeamComponent = ({ image, name, desig }: TeamComponentProps) => {
+const TeamComponent = ({
+  image,
+  name,
+  desig,
+  linkedinLink,
+}: TeamComponentProps) => {
   return (
     <div
       id="team"
-      className="p-4 bg-white rounded-xl w-72 flex flex-col items-center shadow-2xl"
+      className="p-4 bg-white/30 backdrop-blur-md rounded-xl w-72 flex flex-col items-center shadow-2xl"
     >
       <div className="w-40 aspect-square relative">
         <Image
-          className="rounded-full object-cover"
+          className="rounded-full object-cover bg-white"
           src={image}
           fill
           alt={name}
         />
       </div>
-      <h1 className="text-black text-xl font-semibold mt-4 text-center">
-        {name}
-      </h1>
-      <p className="text-gray-600 text-center">{desig}</p>
+      <h1 className="text-xl font-semibold mt-4 text-center">{name}</h1>
+      <p className="text-gray-200 text-center">{desig}</p>
+      {linkedinLink && (
+        <Link className="mt-2" href={linkedinLink} target="_blank">
+          <FaLinkedin size={26} />
+        </Link>
+      )}
     </div>
   );
 };
@@ -422,6 +498,7 @@ const Team = () => {
                   name={member.name}
                   image={member.image}
                   desig={member.desig}
+                  linkedinLink={member.linkedinLink}
                 />
               ))}
             </div>
@@ -442,6 +519,7 @@ const Team = () => {
                   name={member.name}
                   image={member.image}
                   desig={member.desig}
+                  linkedinLink={member.linkedinLink}
                 />
               ))}
             </div>

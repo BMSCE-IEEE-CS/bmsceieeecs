@@ -34,7 +34,7 @@ const StatComponent = ({ value, text, duration = 2000 }: StatComponentProp) => {
   return (
     <div
       ref={ref}
-      className="bg-black/40 flex flex-col items-center px-8 py-4 rounded-xl"
+      className="bg-white/30 flex flex-col items-center px-8 py-4 rounded-xl backdrop-blur-md"
     >
       <h1 className="font-black text-3xl text-white">{stat}+</h1>
       <p className="text-xl text-gray-300">{text}</p>

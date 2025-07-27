@@ -13,24 +13,27 @@ interface AboutComponentProps {
 
 const AboutComponent = ({ title, description, icon }: AboutComponentProps) => {
   return (
-    <div className="flex flex-col items-center justify-center bg-black/50 p-8 rounded-2xl">
-      <div className="text-5xl">{icon}</div>
-      <h1 className="mt-8 text-3xl font-semibold">{title}</h1>
-      <p className="text-justify mt-2 text-gray-200 text-lg">{description}</p>
+    <div className="flex flex-col items-center justify-center text-black p-4 mt-10 text-lg text-justify bg-white/30 backdrop-blur-md rounded-xl">
+      <div className="text-5xl text-white">{icon}</div>
+      <h1 className="mt-4 text-3xl text-white font-semibold">{title}</h1>
+      <p className="text-justify mt-2 text-white text-lg">{description}</p>
     </div>
   );
 };
 
 const About = () => {
   return (
-    <div id="about" className="w-full md:w-5/6 py-20 px-4">
+    <div
+      id="about"
+      className="w-full md:w-5/6 flex flex-col items-center py-20 px-4"
+    >
       <div className="flex flex-col items-center justify-center w-full">
         <h1
           className={`${title.className} text-orange-400 text-4xl md:text-5xl font-bold`}
         >
           About Us
         </h1>
-        <h1 className="bg-black/50 text-gray-200 rounded-2xl p-8 mt-10 text-lg text-justify">
+        <h1 className="text-white  p-4 mt-10 text-lg text-justify bg-white/30 backdrop-blur-md rounded-xl">
           Engaging engineers from various streams along with scientists and
           industry professionals from all the areas of computing, BMSCE IEEE
           Computer Society sets the standard for education and engagement that

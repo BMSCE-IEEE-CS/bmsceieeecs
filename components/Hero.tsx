@@ -20,8 +20,8 @@ const Hero = () => {
             held both in the online and offline mode.
           </p>
           <Image
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg p-4 rounded-2xl bg-white shadow-xl hover:shadow-2xl"
-            src="/images/bmsceieeecsblack.png"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg p-4 rounded-2xl"
+            src="/images/bmsceieeecs.png"
             width={500}
             height={500}
             alt="logo"

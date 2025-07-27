@@ -18,7 +18,7 @@ const Initiatives = () => {
         </h1>
 
         {/* WINGS */}
-        <div className="grid md:grid-cols-2 gap-10 mt-10 items-center bg-black/30 p-6 rounded-2xl">
+        <div className="grid md:grid-cols-2 gap-10 mt-10 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl">
           <div className="max-w-md mx-auto w-full">
             <Image
               className="w-full h-auto"
@@ -50,7 +50,7 @@ const Initiatives = () => {
         </div>
 
         {/* CS PROJECT SERIES */}
-        <div className="grid md:grid-cols-2 gap-10 mt-6 items-center bg-black/30 p-6 rounded-2xl">
+        <div className="grid md:grid-cols-2 gap-10 mt-6 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl">
           <div className="flex flex-col order-2 md:order-1">
             <h1 className="text-orange-400 text-3xl text-center md:text-left font-bold">
               IEEE CS Project Series
@@ -83,7 +83,7 @@ const Initiatives = () => {
         </div>
 
         {/* CS REACH */}
-        <div className="grid md:grid-cols-2 gap-10 mt-6 items-center bg-black/30 p-6 rounded-2xl">
+        <div className="grid md:grid-cols-2 gap-10 mt-6 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl">
           <div className="max-w-md mx-auto w-full">
             {/* <Image
               className="w-full h-auto"
