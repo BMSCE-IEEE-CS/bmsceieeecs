@@ -378,41 +378,51 @@ const teamData: Record<number, TeamCatProps[]> = {
           name: "Aditya N",
           desig: "SAC",
           image: "/images/people/2026/adityan.png",
+          linkedinLink: "https://www.linkedin.com/in/aditya-n-9a8353330",
         },
         {
           name: "Aditya Paradkar",
           desig: "SAC",
           image: "/images/people/2026/adityap.png",
+          linkedinLink: "https://www.linkedin.com/in/aditya-paradkar-b466a8243",
         },
         {
           name: "Ananya Shetty",
           desig: "SAC",
           image: "/images/people/2026/ananya.png",
+          linkedinLink: "https://www.linkedin.com/in/ananya-shetty-25549232b",
         },
         {
           name: "Disha V Bharghav",
           desig: "SAC",
           image: "/images/people/2026/disha.png",
+          linkedinLink: "https://www.linkedin.com/in/disha-v-bhargav-900a57356",
         },
         {
           name: "Dwijesh D Donthy",
           desig: "SAC",
           image: "/images/people/2026/dwijesh.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/dwijesh-d-donthy-73aa851b0",
         },
         {
           name: "Sanjana Shetty",
           desig: "SAC",
           image: "/images/people/2026/sanjana.png",
+          linkedinLink:
+            "https://www.linkedin.com/in/sanjana-v-shetty-73255a36b",
         },
         {
           name: "Shreya Suman",
           desig: "SAC",
           image: "/images/people/2026/shreya.png",
+          linkedinLink: "https://www.linkedin.com/in/shreyasuman11",
         },
         {
           name: "Vaibhav Reddy",
           desig: "SAC",
           image: "/images/people/2026/vaibhav.png",
+          linkedinLink: "https://linkedin.com/in/vaibhav-reddy-982b0a25b",
         },
       ],
     },
