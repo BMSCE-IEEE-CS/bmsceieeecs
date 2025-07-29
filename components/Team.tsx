@@ -459,7 +459,7 @@ const Team = () => {
     <div className="py-20 px-4">
       <div className="flex flex-col items-center justify-center w-full">
         <h1
-          className={`${title.className} text-orange-400 text-4xl md:text-5xl mb-10 font-bold`}
+          className={`${title.className} text-orange-400 text-4xl md:text-5xl mb-10 text-center font-bold`}
         >
           Executive Committee
         </h1>

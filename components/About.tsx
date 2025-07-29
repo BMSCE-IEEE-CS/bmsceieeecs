@@ -29,7 +29,7 @@ const About = () => {
     >
       <div className="flex flex-col items-center justify-center w-full">
         <h1
-          className={`${title.className} text-orange-400 text-4xl md:text-5xl font-bold`}
+          className={`${title.className} text-orange-400 text-4xl md:text-5xl font-bold text-center`}
         >
           About Us
         </h1>

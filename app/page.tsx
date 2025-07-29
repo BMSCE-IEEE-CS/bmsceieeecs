@@ -15,6 +15,18 @@ export default function Home() {
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [loading]);
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       setFadeOut(true);
       setTimeout(() => {
@@ -40,9 +52,10 @@ export default function Home() {
 
   return (
     <div
-      className={`relative flex flex-col items-center justify-center w-full overflow-hidden transition-opacity duration-700 ease-in-out ${
+      className={`relative flex flex-col items-center justify-center w-full min-h-screen overflow-hidden transition-opacity duration-700 ease-in-out ${
         contentVisible ? "opacity-100" : "opacity-0"
       }`}
+      style={{ touchAction: "none" }}
     >
       <Beam />
       <Navbar />
