@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl z-50 bg-blue-500/40 backdrop-blur-lg font-semibold px-6 py-3 rounded-xl shadow-2xl flex justify-between items-center">
+      <nav className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl z-50 bg-white/30 backdrop-blur-lg font-semibold px-6 py-3 rounded-xl shadow-2xl flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Image
             src="/images/bmsceieeecs.png"
@@ -27,23 +27,20 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex gap-6 items-center">
-          <Link href="#" className="hover:underline underline-offset-2">
+          <Link href="/" className="hover:underline underline-offset-2">
             Home
           </Link>
           <Link href="#about" className="hover:underline underline-offset-2">
             About
           </Link>
-          <Link href="#roadmaps" className="hover:underline underline-offset-2">
-            Roadmaps
+          <Link href="#mentors" className="hover:underline underline-offset-2">
+            Mentors
           </Link>
-          <Link href="#contents" className="hover:underline underline-offset-2">
-            Contests
+          <Link href="#projects" className="hover:underline underline-offset-2">
+            Projects
           </Link>
-          <Link href="#practice" className="hover:underline underline-offset-2">
-            Practice
-          </Link>
-          <button className="bg-white text-blue-600 p-2 rounded">
-            Get Started
+          <button className="bg-white text-black p-2 rounded">
+            Get Involved
           </button>
         </div>
 
@@ -57,7 +54,7 @@ const Navbar = () => {
       </nav>
 
       {menuOpen && (
-        <div className="fixed inset-0 bg-[#1e2a3c] text-white flex flex-col items-center justify-center gap-10 text-3xl z-50 transition-opacity duration-300 ease-in-out">
+        <div className="fixed inset-0 bg-[#484e56] text-white flex flex-col items-center justify-center gap-10 text-3xl z-50 transition-opacity duration-300 ease-in-out">
           <button
             className="absolute top-6 right-6 text-4xl"
             onClick={() => setMenuOpen(false)}
@@ -66,20 +63,17 @@ const Navbar = () => {
             &times;
           </button>
 
-          <Link href="/" onClick={() => setMenuOpen(false)}>
+          <Link href="#" onClick={() => setMenuOpen(false)}>
             Home
           </Link>
           <Link href="#about" onClick={() => setMenuOpen(false)}>
             About
           </Link>
-          <Link href="#roadmaps" onClick={() => setMenuOpen(false)}>
-            Roadmaps
+          <Link href="#mentors" onClick={() => setMenuOpen(false)}>
+            Mentors
           </Link>
-          <Link href="#contests" onClick={() => setMenuOpen(false)}>
-            Contests
-          </Link>
-          <Link href="#practice" onClick={() => setMenuOpen(false)}>
-            Practice
+          <Link href="#projects" onClick={() => setMenuOpen(false)}>
+            Projects
           </Link>
           <button
             onClick={() => {
@@ -87,7 +81,7 @@ const Navbar = () => {
               setMenuOpen(false);
             }}
           >
-            Get Started
+            Get Involved
           </button>
         </div>
       )}

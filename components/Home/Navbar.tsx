@@ -26,7 +26,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex gap-6 items-center">
-          <Link href="#" className="hover:underline underline-offset-2">
+          <Link href="/" className="hover:underline underline-offset-2">
             Home
           </Link>
           <Link href="#about" className="hover:underline underline-offset-2">

@@ -71,7 +71,7 @@ const Initiatives = () => {
               members.
             </p>
             <Link
-              href="/csreach"
+              href="/ieeecsps"
               className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 font-semibold text-lg rounded mt-4 animate-grad-xy cursor-pointer w-max mx-auto md:ml-0"
             >
               Get Involved <FaArrowRight />
@@ -117,7 +117,7 @@ const Initiatives = () => {
               exploration, empowering them with skills for a tech-driven world.
             </p>
             <Link
-              href="/ieeecsps"
+              href="/csreach"
               className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 font-semibold text-lg rounded mt-4 animate-grad-xy cursor-pointer w-max mx-auto md:ml-0"
             >
               Become a volunteer <FaArrowRight />
