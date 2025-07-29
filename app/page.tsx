@@ -1,13 +1,14 @@
 "use client";
 
-import Hero from "@/components/Hero";
-import Loader from "@/components/Loader";
-import Navbar from "@/components/Navbar";
+import Hero from "@/components/Home/Hero";
+import Loader from "@/components/Home/Loader";
+import Navbar from "@/components/Home/Navbar";
 import { useEffect, useState } from "react";
-import About from "@/components/About";
-import Team from "@/components/Team";
-import Initiatives from "@/components/Initiatives";
+import About from "@/components/Home/About";
+import Team from "@/components/Home/Team";
+import Initiatives from "@/components/Home/Initiatives";
 import Beam from "@/components/bg/utils/Beam/Beam";
+import Footer from "@/components/Home/Footer";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -55,7 +56,6 @@ export default function Home() {
       className={`relative flex flex-col items-center justify-center w-full min-h-screen overflow-hidden transition-opacity duration-700 ease-in-out ${
         contentVisible ? "opacity-100" : "opacity-0"
       }`}
-      style={{ touchAction: "none" }}
     >
       <Beam />
       <Navbar />
@@ -63,6 +63,7 @@ export default function Home() {
       <About />
       <Team />
       <Initiatives />
+      <Footer />
     </div>
   );
 }

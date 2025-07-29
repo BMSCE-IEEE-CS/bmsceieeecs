@@ -1,5 +1,6 @@
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 const title = Montserrat({ subsets: ["latin"] });
@@ -43,9 +44,12 @@ const Initiatives = () => {
               the culture of learning and innovation within the student
               community.
             </p>
-            <button className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 font-semibold text-lg rounded mt-4 animate-grad-xy cursor-pointer w-max mx-auto md:ml-0">
+            <Link
+              href="/wings"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 font-semibold text-lg rounded mt-4 animate-grad-xy cursor-pointer w-max mx-auto md:ml-0"
+            >
               Get Started <FaArrowRight />
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -66,9 +70,12 @@ const Initiatives = () => {
               contributions - all free and exclusive for IEEE Computer Society
               members.
             </p>
-            <button className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 font-semibold text-lg rounded mt-4 animate-grad-xy cursor-pointer w-max mx-auto md:ml-0">
+            <Link
+              href="/csreach"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 font-semibold text-lg rounded mt-4 animate-grad-xy cursor-pointer w-max mx-auto md:ml-0"
+            >
               Get Involved <FaArrowRight />
-            </button>
+            </Link>
           </div>
           <div className="max-w-md mx-auto w-full order-1 md:order-2">
             {/* <Image
@@ -109,9 +116,12 @@ const Initiatives = () => {
               paths, the program fosters curiosity and encourages future
               exploration, empowering them with skills for a tech-driven world.
             </p>
-            <button className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 font-semibold text-lg rounded mt-4 animate-grad-xy cursor-pointer w-max mx-auto md:ml-0">
+            <Link
+              href="/ieeecsps"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 font-semibold text-lg rounded mt-4 animate-grad-xy cursor-pointer w-max mx-auto md:ml-0"
+            >
               Become a volunteer <FaArrowRight />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
