@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Montserrat, Space_Grotesk } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const font = Space_Grotesk({ subsets: ["latin"] });
 
@@ -16,10 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body
-        className={`${font.className} antialiased bg-gradient-to-br text-white from-slate-600 via-gray-700 to-slate-900 animate-grad-xy`}
-      >
+      <body className={`${font.className} antialiased text-white bg-gray-800`}>
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -12,11 +12,15 @@ import Beam from "@/components/bg/utils/Beam/Beam";
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
+  const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeOut(true);
-      setTimeout(() => setLoading(false), 500);
+      setTimeout(() => {
+        setLoading(false);
+        setContentVisible(true);
+      }, 500);
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -35,7 +39,11 @@ export default function Home() {
   }
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full overflow-hidden">
+    <div
+      className={`relative flex flex-col items-center justify-center w-full overflow-hidden transition-opacity duration-700 ease-in-out ${
+        contentVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <Beam />
       <Navbar />
       <Hero />

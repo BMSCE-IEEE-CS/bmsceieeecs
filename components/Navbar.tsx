@@ -15,12 +15,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-[95%] max-w-7xl mx-auto z-50 bg-orange-400/50 backdrop-blur-md text-white font-semibold px-6 py-3 rounded-b-2xl shadow-lg flex justify-between items-center">
+      <nav className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl z-50 bg-orange-400/40 backdrop-blur-lg font-semibold px-6 py-3 rounded-xl shadow-2xl flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Image
             src="/images/bmsceieeecs.png"
-            width={100}
-            height={100}
+            width={128}
+            height={128}
             alt="Logo"
           />
         </div>
@@ -28,6 +28,9 @@ const Navbar = () => {
         <div className="hidden md:flex gap-6 items-center">
           <Link href="#" className="hover:underline underline-offset-2">
             Home
+          </Link>
+          <Link href="#about" className="hover:underline underline-offset-2">
+            About
           </Link>
           <Link href="#team" className="hover:underline underline-offset-2">
             Team
@@ -67,6 +70,9 @@ const Navbar = () => {
 
           <Link href="#" onClick={() => setMenuOpen(false)}>
             Home
+          </Link>
+          <Link href="#about" onClick={() => setMenuOpen(false)}>
+            About
           </Link>
           <Link href="#team" onClick={() => setMenuOpen(false)}>
             Team
