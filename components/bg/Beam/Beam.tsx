@@ -13,7 +13,7 @@ const Beam = () => {
         speed={6}
         noiseIntensity={0.85}
         scale={0.2}
-        rotation={43}
+        rotation={45}
       />
     </div>
   );

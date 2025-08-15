@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import About from "@/components/Home/About";
 import Team from "@/components/Home/Team";
 import Initiatives from "@/components/Home/Initiatives";
-import Beam from "@/components/bg/utils/Beam/Beam";
+import Beam from "@/components/bg/Beam/Beam";
 import Footer from "@/components/Home/Footer";
 
 export default function Home() {
@@ -58,6 +58,7 @@ export default function Home() {
       }`}
     >
       <Beam />
+      {/* <Glitch /> */}
       <Navbar />
       <Hero />
       <About />

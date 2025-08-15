@@ -20,7 +20,12 @@ type CanvasWrapperProps = {
 };
 
 const CanvasWrapper: React.FC<CanvasWrapperProps> = ({ children }) => (
-  <Canvas dpr={[1, 2]} frameloop="always" className="w-full h-full relative">
+  <Canvas
+    dpr={[1, 2]}
+    frameloop="always"
+    className="fixed top-0 left-0 w-screen h-screen"
+    style={{ pointerEvents: "none", zIndex: -1 }}
+  >
     {children}
   </Canvas>
 );

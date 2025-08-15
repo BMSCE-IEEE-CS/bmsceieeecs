@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative w-full h-screen overflow-hidden bg-gray-900 text-white">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-600 clip-path-hero z-0" />
       <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center h-full px-6 text-center sm:text-left">
-        <div className="mb-10 sm:mb-0 sm:mr-16 bg-white/60 md:bg-white backdrop-blur-md p-4 rounded-lg w-5/6 md:w-1/4 shadow-blue">
+        <div className="mb-10 sm:mb-0 sm:mr-16 bg-white backdrop-blur-md p-4 rounded-lg w-5/6 md:w-1/4 shadow-blue">
           <Image
             src="/images/wings.png"
             alt="Wings Logo"
