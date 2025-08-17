@@ -1,7 +1,16 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
-import { FiUser, FiMail, FiMessageSquare } from "react-icons/fi";
+import {
+  FiUser,
+  FiMail,
+  FiMessageSquare,
+  FiTwitter,
+  FiLinkedin,
+  FiGithub,
+  FiInstagram,
+} from "react-icons/fi";
 
 const ContactPage = () => {
   const [loading, setLoading] = useState(false);
@@ -14,9 +23,10 @@ const ContactPage = () => {
 
     const form = e.currentTarget;
     const formData = {
-      name: form.mName.value,
-      email: form.email.value,
-      message: form.message.value,
+      name: (form.elements.namedItem("mName") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement)
+        .value,
     };
 
     const res = await fetch("/api/contact", {
@@ -46,7 +56,6 @@ const ContactPage = () => {
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            {/* <label className="block text-gray-200 mb-1">Name</label> */}
             <div className="relative">
               <FiUser className="absolute left-3 top-3 h-5 w-5 text-orange-400" />
               <input
@@ -60,7 +69,6 @@ const ContactPage = () => {
           </div>
 
           <div>
-            {/* <label className="block text-gray-200 mb-1">Email</label> */}
             <div className="relative">
               <FiMail className="absolute left-3 top-4 h-5 w-5 text-orange-400" />
               <input
@@ -74,14 +82,13 @@ const ContactPage = () => {
           </div>
 
           <div>
-            {/* <label className="block text-gray-200 mb-1">Message</label> */}
             <div className="relative">
               <FiMessageSquare className="absolute left-3 top-3 h-5 w-5 text-orange-400" />
               <textarea
                 name="message"
                 rows={4}
                 required
-                className="w-full pl-10 pr-3 p-3 rounded-xl border border-orange-500/40 bg-black/30 text-white focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder-gray-400"
+                className="w-full pl-10 pr-3 p-3 rounded-xl border border-orange-500/40 bg-black/30 text-white focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder-gray-400 resize-none"
                 placeholder="Write your message..."
               />
             </div>
@@ -105,6 +112,36 @@ const ContactPage = () => {
             {status}
           </p>
         )}
+
+        <p className="text-gray-300 mt-10">
+          You can also reach out via social media or email directly.
+        </p>
+        <div className="mt-6 flex justify-center space-x-6 text-black">
+          <Link
+            href="https://www.instagram.com/bmsce_ieeecs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-orange-400 p-2 rounded-full border-[3px] border-orange-500 hover:bg-transparent hover:text-white transition duration-300"
+          >
+            <FiInstagram size={22} />
+          </Link>
+          <a
+            href="https://www.linkedin.com/company/bmsce-ieee-computer-society"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-orange-400 p-2 rounded-full border-[3px] border-orange-500 hover:bg-transparent hover:text-white transition duration-300"
+          >
+            <FiLinkedin size={22} />
+          </a>
+          <a
+            href="https://github.com/BMSCE-IEEE-CS"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-orange-400 p-2 rounded-full border-[3px] border-orange-500 hover:bg-transparent hover:text-white transition duration-300"
+          >
+            <FiGithub size={22} />
+          </a>
+        </div>
       </div>
     </div>
   );
