@@ -9,6 +9,7 @@ import Team from "@/components/Home/Team";
 import Initiatives from "@/components/Home/Initiatives";
 import Beam from "@/components/bg/Beam/Beam";
 import Footer from "@/components/Home/Footer";
+import ContactPage from "@/components/Home/Contact";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -64,6 +65,7 @@ export default function Home() {
       <About />
       <Team />
       <Initiatives />
+      <ContactPage />
       <Footer />
     </div>
   );
