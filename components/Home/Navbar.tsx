@@ -41,7 +41,7 @@ const Navbar = () => {
           >
             Initiatives
           </Link>
-          <Link href="#events" className="hover:underline underline-offset-2">
+          <Link href="/events" className="hover:underline underline-offset-2">
             Events
           </Link>
           <Link href="#contact" className="hover:underline underline-offset-2">
@@ -80,7 +80,7 @@ const Navbar = () => {
           <Link href="#initiatives" onClick={() => setMenuOpen(false)}>
             Initiatives
           </Link>
-          <Link href="#events" onClick={() => setMenuOpen(false)}>
+          <Link href="/events" onClick={() => setMenuOpen(false)}>
             Events
           </Link>
           <Link href="#contact" onClick={() => setMenuOpen(false)}>

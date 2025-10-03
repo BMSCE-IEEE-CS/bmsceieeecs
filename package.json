@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^4.0.7",
     "@react-three/drei": "^10.6.1",
     "@react-three/fiber": "^9.2.0",
     "framer-motion": "^12.23.0",
+    "graphql-tag": "^2.12.6",
     "next": "15.3.4",
     "nodemailer": "^7.0.5",
     "react": "^19.0.0",
