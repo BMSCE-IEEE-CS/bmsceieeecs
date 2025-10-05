@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import { Montserrat } from "next/font/google";
 import { FaLinkedin } from "react-icons/fa6";
 import Link from "next/link";

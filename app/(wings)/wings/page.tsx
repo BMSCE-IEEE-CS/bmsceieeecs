@@ -1,5 +1,4 @@
 import Hero from "@/components/Wings/Hero";
-import Navbar from "@/components/Wings/Navbar";
 import React from "react";
 
 const WingsHome = () => {

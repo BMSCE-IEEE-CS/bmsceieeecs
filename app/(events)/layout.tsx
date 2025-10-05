@@ -1,3 +1,5 @@
+import SquareBg from "@/components/bg/Squares/Square";
+
 export default function EventsLayout({
   children,
 }: {
@@ -5,7 +7,11 @@ export default function EventsLayout({
 }) {
   return (
     <html className="scroll-smooth">
-      <body>{children}</body>
+      <body className="relative flex flex-col items-center w-full min-h-screen overflow-hidden transition-opacity duration-700 ease-in-out">
+        <SquareBg />
+
+        {children}
+      </body>
     </html>
   );
 }

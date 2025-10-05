@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="relative flex flex-col animate-grad-xy min-h-screen w-full items-center justify-center px-4 py-20"
+      className="relative flex flex-col animate-grad-xy min-h-screen w-full items-center justify-center px-4 py-20 text-white"
     >
       <div className="flex flex-col">
         <div className="flex flex-col-reverse md:flex-row items-center justify-center max-w-6xl w-full gap-8">

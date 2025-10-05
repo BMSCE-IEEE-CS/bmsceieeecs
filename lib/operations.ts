@@ -14,8 +14,8 @@ export const GET_EVENTS = gql`
 `;
 
 export const GET_EVENT_BY_ID = gql`
-  query GetEventById {
-    event {
+  query GetEventById($id: ID!) {
+    event(id: $id) {
       id
       name
       description
