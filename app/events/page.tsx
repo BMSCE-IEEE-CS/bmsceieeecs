@@ -20,12 +20,9 @@ type EventsQueryProp = {
 };
 
 const EventsPage = () => {
-  const { data, loading, error, refetch } = useQuery<EventsQueryProp>(
-    GET_EVENTS,
-    {
-      fetchPolicy: "cache-and-network",
-    }
-  );
+  const { data, loading, error } = useQuery<EventsQueryProp>(GET_EVENTS, {
+    fetchPolicy: "cache-and-network",
+  });
 
   if (loading) return <p className="text-center">Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
