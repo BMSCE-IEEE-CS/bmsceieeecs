@@ -1,4 +1,10 @@
 import SquareBg from "@/components/bg/Squares/Square";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Events | BMSCE IEEE Computer Society",
+  description: "Events by BMSCE IEEE Computer Society",
+};
 
 export default function EventsLayout({
   children,
