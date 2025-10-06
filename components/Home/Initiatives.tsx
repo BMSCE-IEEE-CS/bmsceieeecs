@@ -44,12 +44,12 @@ const Initiatives = () => {
               the culture of learning and innovation within the student
               community.
             </p>
-            <Link
+            {/* <Link
               href="/wings"
               className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 font-semibold text-lg rounded mt-4 animate-grad-xy cursor-pointer w-max mx-auto md:ml-0"
             >
               Get Started <FaArrowRight />
-            </Link>
+            </Link> */}
           </div>
         </div>
 
@@ -70,12 +70,12 @@ const Initiatives = () => {
               contributions - all free and exclusive for IEEE Computer Society
               members.
             </p>
-            <Link
+            {/* <Link
               href="/ieeecsps"
               className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 font-semibold text-lg rounded mt-4 animate-grad-xy cursor-pointer w-max mx-auto md:ml-0"
             >
               Get Involved <FaArrowRight />
-            </Link>
+            </Link> */}
           </div>
           <div className="max-w-md mx-auto w-full order-1 md:order-2">
             {/* <Image
@@ -116,12 +116,12 @@ const Initiatives = () => {
               paths, the program fosters curiosity and encourages future
               exploration, empowering them with skills for a tech-driven world.
             </p>
-            <Link
+            {/* <Link
               href="/csreach"
               className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 font-semibold text-lg rounded mt-4 animate-grad-xy cursor-pointer w-max mx-auto md:ml-0"
             >
               Become a volunteer <FaArrowRight />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
