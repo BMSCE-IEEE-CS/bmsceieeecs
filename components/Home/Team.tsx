@@ -387,12 +387,6 @@ const teamData: Record<number, TeamCatProps[]> = {
           linkedinLink: "https://www.linkedin.com/in/aditya-paradkar-b466a8243",
         },
         {
-          name: "Ananya Shetty",
-          desig: "SAC",
-          image: "/images/people/2026/ananya.png",
-          linkedinLink: "https://www.linkedin.com/in/ananya-shetty-25549232b",
-        },
-        {
           name: "Disha V Bharghav",
           desig: "SAC",
           image: "/images/people/2026/disha.png",
