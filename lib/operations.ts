@@ -8,6 +8,7 @@ export const GET_EVENTS = gql`
       description
       posterLink
       type
+      regLink
       date
     }
   }
