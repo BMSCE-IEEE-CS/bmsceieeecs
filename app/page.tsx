@@ -10,6 +10,7 @@ import Initiatives from "@/components/Home/Initiatives";
 import Beam from "@/components/bg/Beam/Beam";
 import Footer from "@/components/Home/Footer";
 import ContactPage from "@/components/Home/Contact";
+import Achievements from "@/components/Home/Achievements";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -59,11 +60,11 @@ export default function Home() {
       }`}
     >
       <Beam />
-      {/* <Glitch /> */}
       <Navbar />
       <Hero />
       <About />
       <Team />
+      <Achievements />
       <Initiatives />
       <ContactPage />
       <Footer />
