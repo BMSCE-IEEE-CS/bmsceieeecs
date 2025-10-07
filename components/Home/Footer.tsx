@@ -44,9 +44,9 @@ const Footer = () => {
             <MdOutlineKeyboardDoubleArrowUp size={40} /> Back to Top
           </Link>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center">
           <h1 className="text-3xl font-bold">Site Map</h1>
-          <div className="mt-4 flex flex-col gap-2">
+          <div className="mt-4 grid grid-cols-2 gap-2">
             <Link className="hover:underline text-lg" href="/">
               Home
             </Link>
@@ -67,7 +67,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <h1 className="text-3xl font-bold">Initiatives</h1>
           <div className="mt-4 flex flex-col gap-2">
             <Link className="hover:underline text-lg" href="/wings">
@@ -80,7 +80,7 @@ const Footer = () => {
               CS Reach
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
       <p className="inline-flex items-center gap-2 mt-8 text-center">
         <FaRegCopyright /> 2025 BMSCE IEEE Computer Society. All rights
