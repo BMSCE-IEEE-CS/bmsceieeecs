@@ -32,18 +32,24 @@ const Navbar = () => {
           <Link href="#about" className="hover:underline underline-offset-2">
             About
           </Link>
+           <Link href="/events" className="hover:underline underline-offset-2">
+            Events
+          </Link>
+          
           <Link href="#team" className="hover:underline underline-offset-2">
             Team
           </Link>
           <Link
             href="#initiatives"
-            className="hover:underline underline-offset-2"
-          >
+            className="hover:underline underline-offset-2">
             Initiatives
           </Link>
-          <Link href="/events" className="hover:underline underline-offset-2">
-            Events
+          <Link
+            href="#achievements"
+            className="hover:underline underline-offset-2">
+            Achievements
           </Link>
+         
           <Link href="#contact" className="hover:underline underline-offset-2">
             Contact Us
           </Link>
@@ -71,8 +77,12 @@ const Navbar = () => {
           <Link href="#" onClick={() => setMenuOpen(false)}>
             Home
           </Link>
+          
           <Link href="#about" onClick={() => setMenuOpen(false)}>
             About
+          </Link>
+          <Link href="/events" onClick={() => setMenuOpen(false)}>
+            Events
           </Link>
           <Link href="#team" onClick={() => setMenuOpen(false)}>
             Team
@@ -80,8 +90,8 @@ const Navbar = () => {
           <Link href="#initiatives" onClick={() => setMenuOpen(false)}>
             Initiatives
           </Link>
-          <Link href="/events" onClick={() => setMenuOpen(false)}>
-            Events
+          <Link href="#achievements" onClick={() => setMenuOpen(false)}>
+            Achievements
           </Link>
           <Link href="#contact" onClick={() => setMenuOpen(false)}>
             Contact Us

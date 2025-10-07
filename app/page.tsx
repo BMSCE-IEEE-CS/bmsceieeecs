@@ -64,8 +64,8 @@ export default function Home() {
       <Hero />
       <About />
       <Team />
-      <Achievements />
       <Initiatives />
+      <Achievements />
       <ContactPage />
       <Footer />
     </div>
