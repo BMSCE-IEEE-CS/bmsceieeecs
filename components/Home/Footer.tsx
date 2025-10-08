@@ -7,7 +7,7 @@ import { MdOutlineEmail, MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 const Footer = () => {
   return (
     <div className="p-10 bg-orange-400/40 backdrop-blur-md rounded-t-3xl flex flex-col items-center">
-      <div className="grid md:grid-cols-4 gap-10">
+      <div className="grid lg:grid-cols-4 gap-10">
         <div className="flex flex-col col-span-2">
           <Image
             src="/images/bmsceieeecs.png"

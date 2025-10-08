@@ -44,7 +44,7 @@ const About = () => {
           shapes, and guides the future of not only its members, but the greater
           industry, enabling new opportunities to serve our world better.
         </h1>
-        <div className="grid md:grid-cols-3 gap-4 mt-4 w-full">
+        <div className="grid lg:grid-cols-3 gap-4 mt-4 w-full">
           <AboutComponent
             icon={<MdVisibility />}
             title="Vision"
