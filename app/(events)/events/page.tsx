@@ -51,7 +51,7 @@ const Events = () => {
         return events.filter((e) => e.dateObj.getFullYear() === 2024);
       case 3:
         return events.filter((e) => e.dateObj.getFullYear() === 2023);
-      case 3:
+      case 4:
         return events.filter((e) => e.dateObj.getFullYear() === 2022);
       default:
         return [];
