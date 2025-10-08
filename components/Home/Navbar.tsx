@@ -25,38 +25,40 @@ const Navbar = () => {
           />
         </div>
 
-        <div className="hidden md:flex gap-6 items-center">
+        <div className="hidden lg:flex gap-6 items-center">
           <Link href="/" className="hover:underline underline-offset-2">
             Home
           </Link>
           <Link href="#about" className="hover:underline underline-offset-2">
             About
           </Link>
-           <Link href="/events" className="hover:underline underline-offset-2">
+          <Link href="/events" className="hover:underline underline-offset-2">
             Events
           </Link>
-          
+
           <Link href="#team" className="hover:underline underline-offset-2">
             Team
           </Link>
           <Link
             href="#initiatives"
-            className="hover:underline underline-offset-2">
+            className="hover:underline underline-offset-2"
+          >
             Initiatives
           </Link>
           <Link
             href="#achievements"
-            className="hover:underline underline-offset-2">
+            className="hover:underline underline-offset-2"
+          >
             Achievements
           </Link>
-         
+
           <Link href="#contact" className="hover:underline underline-offset-2">
             Contact Us
           </Link>
         </div>
 
         <button
-          className="md:hidden text-3xl"
+          className="lg:hidden text-3xl"
           onClick={() => setMenuOpen(true)}
           aria-label="Open Menu"
         >
@@ -77,7 +79,7 @@ const Navbar = () => {
           <Link href="#" onClick={() => setMenuOpen(false)}>
             Home
           </Link>
-          
+
           <Link href="#about" onClick={() => setMenuOpen(false)}>
             About
           </Link>
