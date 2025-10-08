@@ -53,6 +53,8 @@ const Events = () => {
         return events.filter((e) => e.dateObj.getFullYear() === 2023);
       case 4:
         return events.filter((e) => e.dateObj.getFullYear() === 2022);
+      case 5:
+        return events.filter((e) => e.dateObj.getFullYear() === 2021);
       default:
         return [];
     }
@@ -64,6 +66,7 @@ const Events = () => {
     { label: "2024", id: 2 },
     { label: "2023", id: 3 },
     { label: "2022", id: 4 },
+    { label: "2021", id: 5 },
   ];
   return (
     <div className="flex flex-col items-center justify-center w-full">
