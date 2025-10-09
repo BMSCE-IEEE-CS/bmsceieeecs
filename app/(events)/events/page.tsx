@@ -102,7 +102,13 @@ const Events = () => {
           {!loading && !error && (
             <>
               {filteredEvents.length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full lg:w-4/5 px-4 my-10">
+                <div
+                  className={`grid grid-cols-1 sm:grid-cols-2 ${
+                    filteredEvents.length === 1
+                      ? "lg:grid-cols-3 place-items-center"
+                      : "lg:grid-cols-3"
+                  } gap-8 w-full lg:w-4/5 px-4 my-10`}
+                >
                   {filteredEvents.map((event) => (
                     <EventBriefCard
                       key={event.id}
