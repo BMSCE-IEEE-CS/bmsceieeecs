@@ -469,9 +469,10 @@ const Team = () => {
         </h1>
 
         <TeamComponent
-          name="Dr. N Sandeep Verma"
+          name="Dr. N Sandeep Varma"
           desig="Chapter Advisor"
           image="/images/people/sv.png"
+          linkedinLink="https://www.linkedin.com/in/dr-sandeep-varma-nadmipalli-527a471a4/"
         />
 
         <div className="flex flex-wrap items-center justify-center mt-10 gap-4 mb-4">
