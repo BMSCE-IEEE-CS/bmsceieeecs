@@ -2,6 +2,7 @@
 
 import EventBriefCard from "@/components/Events/EventBriefCard";
 import Loader from "@/components/Home/Loader";
+import Navbar from "@/components/Home/Navbar";
 import { GET_EVENTS } from "@/lib/operations";
 import { useQuery } from "@apollo/client/react";
 import { Montserrat } from "next/font/google";
@@ -71,8 +72,9 @@ const Events = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <div className="flex flex-col items-center w-full">
+        <Navbar />
         <h1
-          className={`${title.className} text-orange-400 text-4xl md:text-5xl mt-10 font-bold text-center`}
+          className={`${title.className} text-orange-400 text-4xl md:text-5xl mt-30 font-bold text-center`}
         >
           Events
         </h1>
