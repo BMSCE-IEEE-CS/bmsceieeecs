@@ -6,7 +6,7 @@ import Navbar from "@/components/Home/Navbar";
 import { GET_EVENTS } from "@/lib/operations";
 import { useQuery } from "@apollo/client/react";
 import { Montserrat } from "next/font/google";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 const title = Montserrat({ subsets: ["latin"] });
 
@@ -60,6 +60,17 @@ const Events = () => {
         return [];
     }
   }, [current, data]);
+
+  useEffect(() => {
+    if (!loading && data?.events) {
+      const now = new Date();
+      const upcoming = data.events.filter((e) => new Date(e.date) >= now);
+
+      if (upcoming.length === 0) {
+        setCurrent(1);
+      }
+    }
+  }, [data, loading]);
 
   const tabs = [
     { label: "Upcoming", id: 0 },

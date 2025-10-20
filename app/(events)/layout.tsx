@@ -13,7 +13,7 @@ export default function EventsLayout({
 }) {
   return (
     <html className="scroll-smooth">
-      <body className="relative flex flex-col items-center w-full min-h-screen overflow-x-hidden transition-opacity duration-700 ease-in-out">
+      <body className="relative flex flex-col items-center w-full min-h-screen overflow-x-hidden transition-opacity duration-700 ease-in-out text-white">
         <SquareBg />
 
         {children}
