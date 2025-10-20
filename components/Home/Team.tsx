@@ -432,7 +432,7 @@ const TeamComponent = ({
   return (
     <div
       id="team"
-      className="p-4 bg-white/30 backdrop-blur-md rounded-xl w-72 flex flex-col items-center shadow-2xl"
+      className="p-4 bg-white/30 backdrop-blur-md rounded-xl w-72 flex flex-col items-center shadow-2xl text-white"
     >
       <div className="w-40 aspect-square relative">
         <Image
@@ -481,7 +481,7 @@ const Team = () => {
               key={y}
               onClick={() => setYear(y)}
               className={`px-4 py-2 border-2 border-orange-400 font-semibold rounded-lg transition-all duration-300 text-lg ${
-                year === y ? "bg-orange-400 text-black" : ""
+                year === y ? "bg-orange-400 text-black" : "text-white"
               }`}
             >
               {y}

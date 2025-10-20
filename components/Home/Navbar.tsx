@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl z-50 bg-orange-400/40 backdrop-blur-lg font-semibold px-6 py-3 rounded-xl shadow-2xl flex justify-between items-center">
+      <nav className="fixed top-2 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl z-50 bg-orange-400/40 backdrop-blur-lg font-semibold px-6 py-3 rounded-xl shadow-2xl flex justify-between items-center text-white">
         <div className="flex items-center gap-2">
           <Image
             src="/images/bmsceieeecs.png"

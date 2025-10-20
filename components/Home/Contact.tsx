@@ -46,12 +46,12 @@ const ContactPage = () => {
 
   return (
     <div id="contact" className="py-10">
-      <div className="relative w-full max-w-lg mx-auto bg-white/15 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-orange-500/30">
+      <div className="relative w-full max-w-lg mx-auto bg-white/15 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-orange-500/30 text-white">
         <h2 className="text-2xl font-bold text-center text-orange-400 mb-2">
           Get in Touch
         </h2>
         <p className="text-center text-sm text-gray-300 mb-6">
-          Have questions or feedback? Drop us a message and we’ll reply soon.
+          Have questions or feedback? Drop us a message and we'll reply soon.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -121,7 +121,7 @@ const ContactPage = () => {
             href="https://www.instagram.com/bmsce_ieeecs/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-orange-400 p-2 rounded-full border-[3px] border-orange-500 hover:bg-transparent hover:text-white transition duration-300"
+            className="bg-orange-400 p-2 rounded-full border-[3px] border-orange-400 hover:bg-transparent hover:text-white transition duration-300"
           >
             <FiInstagram size={22} />
           </Link>
@@ -129,7 +129,7 @@ const ContactPage = () => {
             href="https://www.linkedin.com/company/bmsce-ieee-computer-society"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-orange-400 p-2 rounded-full border-[3px] border-orange-500 hover:bg-transparent hover:text-white transition duration-300"
+            className="bg-orange-400 p-2 rounded-full border-[3px] border-orange-400 hover:bg-transparent hover:text-white transition duration-300"
           >
             <FiLinkedin size={22} />
           </a>
@@ -137,7 +137,7 @@ const ContactPage = () => {
             href="https://github.com/BMSCE-IEEE-CS"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-orange-400 p-2 rounded-full border-[3px] border-orange-500 hover:bg-transparent hover:text-white transition duration-300"
+            className="bg-orange-400 p-2 rounded-full border-[3px] border-orange-400 hover:bg-transparent hover:text-white transition duration-300"
           >
             <FiGithub size={22} />
           </a>

@@ -1,5 +1,3 @@
-
-
 import { Montserrat } from "next/font/google";
 import React from "react";
 
@@ -7,11 +5,11 @@ const titleFont = Montserrat({ subsets: ["latin"] });
 
 const awardCategories = [
   {
-    id: 'global',
+    id: "global",
     title: <i>Global Recognitions</i>,
     awards: [
       {
-        id: 'global-award-2024',
+        id: "global-award-2024",
         imageSrc: "/images/awards/2024_3.png",
         caption: (
           <>
@@ -25,7 +23,7 @@ const awardCategories = [
         altText: "Outstanding Chapter Global Award 2024",
       },
       {
-        id: 'techx-2024',
+        id: "techx-2024",
         imageSrc: "/images/awards/2024_2.png",
         caption: (
           <>
@@ -41,11 +39,11 @@ const awardCategories = [
     ],
   },
   {
-    id: 'national',
+    id: "national",
     title: <i>National Level Award</i>,
     awards: [
       {
-        id: 'aicssyc-2023',
+        id: "aicssyc-2023",
         imageSrc: "/images/awards/2023_1.png",
         caption: "1st Runner-up Chapter at AICSSYC 2023",
         altText: "1st Runner-up Chapter at AICSSYC 2023 Award",
@@ -53,25 +51,30 @@ const awardCategories = [
     ],
   },
   {
-    id: 'bangalore-chapter',
-    title: <i>Outstanding Student Chapter Awards by<br /> IEEE Computer Society Bangalore Chapter</i>,
+    id: "bangalore-chapter",
+    title: (
+      <i>
+        Outstanding Student Chapter Awards by
+        <br /> IEEE Computer Society Bangalore Chapter
+      </i>
+    ),
     awards: [
       {
-        id: 'csbc-2024',
-        desktopImageSrc: "/images/awards/2024_1.png", 
+        id: "csbc-2024",
+        desktopImageSrc: "/images/awards/2024_1.png",
         mobileImageSrc: "/images/awards/mob_view.png",
         caption: "2024",
         altText: "Outstanding Student Chapter 2024",
         imageHeightClass: "max-h-48",
       },
       {
-        id: 'csbc-2023',
+        id: "csbc-2023",
         imageSrc: "/images/awards/2023_2.png",
         caption: "2023",
         altText: "Outstanding Student Chapter 2023",
       },
       {
-        id: 'csbc-2022',
+        id: "csbc-2022",
         imageSrc: "/images/awards/2022_1.png",
         caption: "2022",
         altText: "Outstanding Student Chapter 2022",
@@ -79,29 +82,29 @@ const awardCategories = [
     ],
   },
   {
-   id: 'volunteer',
+    id: "volunteer",
     title: <i>Student Volunteer Awards</i>,
     awards: [
       {
-        id: 'stellar-2024',
+        id: "stellar-2024",
         imageSrc: "/images/awards/2024_4.png",
         caption: "Stellar Execom Volunteer Award 2024",
         altText: "Stellar Execom Volunteer Award 2024",
       },
       {
-        id: 'osv-2024',
+        id: "osv-2024",
         imageSrc: "/images/awards/2024_5.png",
         caption: "Outstanding Student Volunteer 2024",
         altText: "Outstanding Student Volunteer 2024",
       },
       {
-        id: 'osv-2023',
+        id: "osv-2023",
         imageSrc: "/images/awards/2023_3.png",
         caption: "Outstanding Student Volunteer 2023",
         altText: "Outstanding Student Volunteer 2023",
       },
       {
-        id: 'osv-2022',
+        id: "osv-2022",
         imageSrc: "/images/awards/2022_2.png",
         caption: "Outstanding Student Volunteer 2022",
         altText: "Outstanding Student Volunteer 2022",
@@ -115,9 +118,9 @@ interface AwardItemProps {
   altText: string;
   caption: React.ReactNode;
   imageHeightClass?: string;
-  imageSrc?: string; 
-  desktopImageSrc?: string; 
-  mobileImageSrc?: string; 
+  imageSrc?: string;
+  desktopImageSrc?: string;
+  mobileImageSrc?: string;
 }
 
 interface AwardCategoryData {
@@ -126,15 +129,15 @@ interface AwardCategoryData {
   awards: AwardItemProps[];
 }
 
-const AwardItem = ({ 
-  imageSrc, 
-  desktopImageSrc, 
-  mobileImageSrc, 
-  altText, 
-  caption, 
-  imageHeightClass 
+const AwardItem = ({
+  imageSrc,
+  desktopImageSrc,
+  mobileImageSrc,
+  altText,
+  caption,
+  imageHeightClass,
 }: AwardItemProps) => {
-  const defaultHeight = imageHeightClass || 'max-h-64';
+  const defaultHeight = imageHeightClass || "max-h-64";
 
   return (
     <div className="flex flex-col items-center text-center">
@@ -159,14 +162,14 @@ const AwardItem = ({
         />
       )}
       <p className="mt-4 max-w-[500px] font-bold text-orange-200 leading-snug text-extralight md:text-lg">
-      {caption}
-    </p>
+        {caption}
+      </p>
     </div>
   );
 };
 
 const AwardCategory = ({ title, awards }: AwardCategoryData) => (
-  <section className="w-full max-w-6xl mt-10 bg-white/30 backdrop-blur-md rounded-2xl p-8 md:p-4">
+  <section className="w-full max-w-6xl mt-10 bg-white/30 backdrop-blur-md rounded-2xl p-8 md:p-4 text-white">
     <h2 className="text-2xl md:text-3xl md-text-3xl font-semibold text-center text-white mb-7 leading-tight">
       {title}
     </h2>

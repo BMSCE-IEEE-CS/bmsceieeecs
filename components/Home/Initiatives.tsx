@@ -9,7 +9,7 @@ const Initiatives = () => {
   return (
     <div
       id="initiatives"
-      className="w-full md:w-5/6 flex flex-col items-center py-20 px-4"
+      className="w-full md:w-5/6 flex flex-col items-center py-20 px-4 text-white"
     >
       <div className="w-full flex flex-col items-center justify-center">
         <h1
