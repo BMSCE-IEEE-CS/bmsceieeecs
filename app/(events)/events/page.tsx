@@ -7,6 +7,7 @@ import { GET_EVENTS } from "@/lib/operations";
 import { useQuery } from "@apollo/client/react";
 import { Montserrat } from "next/font/google";
 import React, { useEffect, useMemo, useState } from "react";
+import { motion } from "framer-motion";
 
 const title = Montserrat({ subsets: ["latin"] });
 
@@ -84,14 +85,22 @@ const Events = () => {
     <div className="flex flex-col items-center justify-center w-full">
       <div className="flex flex-col items-center w-full">
         <Navbar />
-        <h1
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
           className={`${title.className} text-orange-400 text-4xl md:text-5xl mt-30 font-bold text-center`}
         >
           Events
-        </h1>
+        </motion.h1>
         <div className="mt-10 flex flex-wrap gap-4 justify-center">
-          {tabs.map((tab) => (
-            <button
+          {tabs.map((tab, idx) => (
+            <motion.button
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: (idx + 1) * 0.2 }}
               key={tab.id}
               onClick={() => setCurrent(tab.id)}
               className={`rounded-xl px-4 py-2 font-bold text-xl backdrop-blur-md cursor-pointer transition-all duration-150 ${
@@ -101,10 +110,16 @@ const Events = () => {
               }`}
             >
               {tab.label}
-            </button>
+            </motion.button>
           ))}
         </div>
-        <div className="bg-slate-300 h-0.5 w-full mt-6"></div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 1 }}
+          className="bg-slate-300 h-0.5 w-full mt-6"
+        ></motion.div>
         <div className="flex flex-col items-center justify-center mt-10">
           {loading && <Loader />}
           {error && (
@@ -122,9 +137,10 @@ const Events = () => {
                       : "lg:grid-cols-3"
                   } gap-8 w-full lg:w-4/5 px-4 my-10`}
                 >
-                  {filteredEvents.map((event) => (
+                  {filteredEvents.map((event, idx) => (
                     <EventBriefCard
                       key={event.id}
+                      idx={idx}
                       id={event.id}
                       name={event.name}
                       description={event.description}

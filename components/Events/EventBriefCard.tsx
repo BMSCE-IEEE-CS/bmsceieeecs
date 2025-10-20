@@ -4,8 +4,10 @@ import React from "react";
 import Image from "next/image";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface EventBriefCardProp {
+  idx: number;
   id: string;
   imageUrl: string;
   name: string;
@@ -16,6 +18,7 @@ interface EventBriefCardProp {
 }
 
 const EventBriefCard = ({
+  idx,
   id,
   imageUrl,
   name,
@@ -33,7 +36,13 @@ const EventBriefCard = ({
   const isUpcoming = new Date(date) > new Date();
 
   return (
-    <div className="group flex flex-col overflow-hidden rounded-3xl bg-slate-900/60 backdrop-blur-xl border border-white/10 shadow-[0_0_25px_rgba(0,0,0,0.3)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,150,60,0.25)]">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: (idx + 1) * 0.3 }}
+      className="group flex flex-col overflow-hidden rounded-3xl bg-slate-900/60 backdrop-blur-xl border border-white/10 shadow-[0_0_25px_rgba(0,0,0,0.3)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,150,60,0.25)]"
+    >
       <div className="relative w-full pt-[100%] overflow-hidden">
         <Image
           src={imageUrl}
@@ -86,7 +95,7 @@ const EventBriefCard = ({
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -29,30 +29,30 @@ const Navbar = () => {
           <Link href="/" className="hover:underline underline-offset-2">
             Home
           </Link>
-          <Link href="#about" className="hover:underline underline-offset-2">
+          <Link href="/#about" className="hover:underline underline-offset-2">
             About
           </Link>
           <Link href="/events" className="hover:underline underline-offset-2">
             Events
           </Link>
 
-          <Link href="#team" className="hover:underline underline-offset-2">
+          <Link href="/#team" className="hover:underline underline-offset-2">
             Team
           </Link>
           <Link
-            href="#initiatives"
+            href="/#initiatives"
             className="hover:underline underline-offset-2"
           >
             Initiatives
           </Link>
           <Link
-            href="#achievements"
+            href="/#achievements"
             className="hover:underline underline-offset-2"
           >
             Achievements
           </Link>
 
-          <Link href="#contact" className="hover:underline underline-offset-2">
+          <Link href="/#contact" className="hover:underline underline-offset-2">
             Contact Us
           </Link>
         </div>
@@ -80,22 +80,22 @@ const Navbar = () => {
             Home
           </Link>
 
-          <Link href="#about" onClick={() => setMenuOpen(false)}>
+          <Link href="/#about" onClick={() => setMenuOpen(false)}>
             About
           </Link>
           <Link href="/events" onClick={() => setMenuOpen(false)}>
             Events
           </Link>
-          <Link href="#team" onClick={() => setMenuOpen(false)}>
+          <Link href="/#team" onClick={() => setMenuOpen(false)}>
             Team
           </Link>
-          <Link href="#initiatives" onClick={() => setMenuOpen(false)}>
+          <Link href="/#initiatives" onClick={() => setMenuOpen(false)}>
             Initiatives
           </Link>
-          <Link href="#achievements" onClick={() => setMenuOpen(false)}>
+          <Link href="/#achievements" onClick={() => setMenuOpen(false)}>
             Achievements
           </Link>
-          <Link href="#contact" onClick={() => setMenuOpen(false)}>
+          <Link href="/#contact" onClick={() => setMenuOpen(false)}>
             Contact Us
           </Link>
         </div>
