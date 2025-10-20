@@ -199,7 +199,7 @@ const Achievements = () => {
   return (
     <div
       id="achievements"
-      className="flex flex-col items-center w-full px-4 py-20"
+      className="flex flex-col items-center w-full px-4 py-20 md:w-5/6"
     >
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
