@@ -52,9 +52,9 @@ const Navbar = () => {
             Achievements
           </Link>
 
-          <Link href="/#contact" className="hover:underline underline-offset-2">
+          {/* <Link href="/#contact" className="hover:underline underline-offset-2">
             Contact Us
-          </Link>
+          </Link> */}
         </div>
 
         <button
@@ -95,9 +95,9 @@ const Navbar = () => {
           <Link href="/#achievements" onClick={() => setMenuOpen(false)}>
             Achievements
           </Link>
-          <Link href="/#contact" onClick={() => setMenuOpen(false)}>
+          {/* <Link href="/#contact" onClick={() => setMenuOpen(false)}>
             Contact Us
-          </Link>
+          </Link> */}
         </div>
       )}
     </>
