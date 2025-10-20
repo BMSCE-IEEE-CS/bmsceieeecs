@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Montserrat } from "next/font/google";
 import { FaLinkedin } from "react-icons/fa6";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 // const font = localFont({ src: "../app/berlinsans.ttf" });
 
@@ -16,6 +17,7 @@ interface TeamComponentProps {
   name: string;
   desig: string;
   linkedinLink?: string;
+  id?: number;
 }
 
 interface TeamCatProps {
@@ -428,9 +430,14 @@ const TeamComponent = ({
   name,
   desig,
   linkedinLink,
+  id,
 }: TeamComponentProps) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: (id ?? 0 + 1) * 0.3 }}
       id="team"
       className="p-4 bg-white/30 backdrop-blur-md rounded-xl w-72 flex flex-col items-center shadow-2xl text-white"
     >
@@ -449,7 +456,7 @@ const TeamComponent = ({
           <FaLinkedin size={26} />
         </Link>
       )}
-    </div>
+    </motion.div>
   );
 };
 
@@ -462,22 +469,31 @@ const Team = () => {
   return (
     <div className="py-20 px-4">
       <div className="flex flex-col items-center justify-center w-full">
-        <h1
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
           className={`${title.className} text-orange-400 text-4xl md:text-5xl mb-10 text-center font-bold`}
         >
           Executive Committee
-        </h1>
+        </motion.h1>
 
         <TeamComponent
           name="Dr. N Sandeep Varma"
           desig="Chapter Advisor"
           image="/images/people/sv.png"
           linkedinLink="https://www.linkedin.com/in/dr-sandeep-varma-nadmipalli-527a471a4/"
+          id={1}
         />
 
         <div className="flex flex-wrap items-center justify-center mt-10 gap-4 mb-4">
-          {years.map((y) => (
-            <button
+          {years.map((y, idx) => (
+            <motion.button
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: (idx + 1) * 0.2 }}
               key={y}
               onClick={() => setYear(y)}
               className={`px-4 py-2 border-2 border-orange-400 font-semibold rounded-lg transition-all duration-300 text-lg ${
@@ -485,20 +501,25 @@ const Team = () => {
               }`}
             >
               {y}
-            </button>
+            </motion.button>
           ))}
         </div>
 
         {yearData?.execom && (
           <>
-            <h2
+            <motion.h2
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.4 }}
               className={`${title.className} text-3xl text-orange-400 text-center mt-10 font-bold`}
             >
               Core Committee
-            </h2>
+            </motion.h2>
             <div className="flex flex-wrap justify-center items-start gap-6 w-full mt-6">
               {yearData.execom.map((member, idx) => (
                 <TeamComponent
+                  id={idx}
                   key={`execom-${member.name}-${idx}`}
                   name={member.name}
                   image={member.image}
@@ -512,14 +533,19 @@ const Team = () => {
 
         {yearData?.sac && (
           <>
-            <h2
+            <motion.h2
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.4 }}
               className={`${title.className} text-3xl text-orange-400 text-center mt-14 font-bold`}
             >
               Student Activities Committee Coordinators
-            </h2>
+            </motion.h2>
             <div className="flex flex-wrap justify-center items-start gap-6 w-full mt-6">
               {yearData.sac.map((member, idx) => (
                 <TeamComponent
+                  id={idx}
                   key={`sac-${member.name}-${idx}`}
                   name={member.name}
                   image={member.image}

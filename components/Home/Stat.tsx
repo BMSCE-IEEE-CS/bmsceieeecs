@@ -1,15 +1,21 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import { useInView } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 
 interface StatComponentProp {
   value: number;
   text: string;
   duration?: number;
+  id: number;
 }
 
-const StatComponent = ({ value, text, duration = 2000 }: StatComponentProp) => {
+const StatComponent = ({
+  value,
+  text,
+  duration = 4000,
+  id,
+}: StatComponentProp) => {
   const [stat, setStat] = useState(0);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -32,23 +38,32 @@ const StatComponent = ({ value, text, duration = 2000 }: StatComponentProp) => {
   }, [inView, value, duration]);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeIn", delay: (id + 1) * 0.3 }}
       ref={ref}
       className="bg-white/30 flex flex-col items-center px-8 py-4 rounded-xl backdrop-blur-md"
     >
       <h1 className="font-black text-3xl text-white">{stat}+</h1>
       <p className="text-xl text-gray-300">{text}</p>
-    </div>
+    </motion.div>
   );
 };
 
 const Stat = () => {
+  const statData = [
+    { value: 1084, text: "Members" },
+    { value: 70, text: "Events" },
+    { value: 6, text: "Prestigious Awards" },
+  ];
   return (
     <div className="w-full py-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center justify-center w-3/4 mx-auto">
-        <StatComponent value={1084} text="Members" />
-        <StatComponent value={70} text="Events" />
-        <StatComponent value={6} text="Prestigious Awards" />
+        {statData.map((s, idx) => (
+          <StatComponent key={idx} id={idx} value={s.value} text={s.text} />
+        ))}
       </div>
     </div>
   );

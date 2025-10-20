@@ -2,6 +2,7 @@ import { Montserrat } from "next/font/google";
 import { FaBullseye } from "react-icons/fa6";
 import { MdVisibility } from "react-icons/md";
 import { RiFlagLine } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 const title = Montserrat({ subsets: ["latin"] });
 
@@ -9,31 +10,73 @@ interface AboutComponentProps {
   title: string;
   description: string;
   icon: React.ReactElement;
+  id: number;
 }
 
-const AboutComponent = ({ title, description, icon }: AboutComponentProps) => {
+const AboutComponent = ({
+  title,
+  description,
+  icon,
+  id,
+}: AboutComponentProps) => {
   return (
-    <div className="flex flex-col items-center justify-center text-black p-4 mt-10 text-lg text-justify bg-white/30 backdrop-blur-md rounded-xl">
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: (id + 1) * 0.4 }}
+      className="flex flex-col items-center justify-center text-black p-4 mt-10 text-lg text-justify bg-white/30 backdrop-blur-md rounded-xl"
+    >
       <div className="text-5xl text-white">{icon}</div>
       <h1 className="mt-4 text-3xl text-white font-semibold">{title}</h1>
       <p className="text-justify mt-2 text-white text-lg">{description}</p>
-    </div>
+    </motion.div>
   );
 };
 
 const About = () => {
+  const aboutData = [
+    {
+      icon: <MdVisibility />,
+      title: "Vision",
+      description:
+        "To grow into a premier technical society, fostering eminent professionals with creative minds, innovative ideas and sound practical skills, team spirit and true leadership qualities, and to shape a future where technology works for the man's enrichment.",
+    },
+    {
+      icon: <FaBullseye />,
+      title: "Mission",
+      description:
+        "Providing individuals with state-of-the-art knowledge in various technological disciplines and instilling within them a strong sense of social consciousness and professionalism and enabling them to face life's challenges with courage and conviction.",
+    },
+    {
+      icon: <RiFlagLine />,
+      title: "Objective",
+      description:
+        "The society's broad objective of being an active agent of change by responding to the needs and challenges of the current environment. These challenges can be overcome by training, working as a team and inculcating leadership qualities within.",
+    },
+  ];
   return (
     <div
       id="about"
       className="w-full md:w-5/6 flex flex-col items-center py-20 px-4"
     >
       <div className="flex flex-col items-center justify-center w-full">
-        <h1
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
           className={`${title.className} text-orange-400 text-4xl md:text-5xl font-bold text-center`}
         >
           About Us
-        </h1>
-        <h1 className="text-white  p-4 mt-10 text-lg text-justify bg-white/30 backdrop-blur-md rounded-xl">
+        </motion.h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-white  p-4 mt-10 text-lg text-justify bg-white/30 backdrop-blur-md rounded-xl"
+        >
           Engaging engineers from various streams along with scientists and
           industry professionals from all the areas of computing, BMSCE IEEE
           Computer Society sets the standard for education and engagement that
@@ -43,23 +86,16 @@ const About = () => {
           debate and collaboration, BMSCE IEEE Computer Society empowers,
           shapes, and guides the future of not only its members, but the greater
           industry, enabling new opportunities to serve our world better.
-        </h1>
+        </motion.h1>
         <div className="grid lg:grid-cols-3 gap-4 mt-4 w-full">
-          <AboutComponent
-            icon={<MdVisibility />}
-            title="Vision"
-            description="To grow into a premier technical society, fostering eminent professionals with creative minds, innovative ideas and sound practical skills, team spirit and true leadership qualities, and to shape a future where technology works for the man's enrichment."
-          />
-          <AboutComponent
-            icon={<FaBullseye />}
-            title="Mission"
-            description="Providing individuals with state-of-the-art knowledge in various technological disciplines and instilling within them a strong sense of social consciousness and professionalism and enabling them to face life's challenges with courage and conviction."
-          />
-          <AboutComponent
-            icon={<RiFlagLine />}
-            title="Objective"
-            description="The society's broad objective of being an active agent of change by responding to the needs and challenges of the current environment. These challenges can be overcome by training, working as a team and inculcating leadership qualities within."
-          />
+          {aboutData.map((data, idx) => (
+            <AboutComponent
+              icon={data.icon}
+              title={data.title}
+              description={data.description}
+              id={idx}
+            />
+          ))}
         </div>
       </div>
     </div>

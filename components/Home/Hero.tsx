@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
 import Stat from "./Stat";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -12,7 +13,13 @@ const Hero = () => {
     >
       <div className="flex flex-col">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-center max-w-6xl w-full gap-8 mt-10">
-          <p className="text-justify text-sm sm:text-lg lg:w-1/2">
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeIn", delay: 0.2 }}
+            className="text-justify text-sm sm:text-lg lg:w-1/2"
+          >
             BMSCE IEEE Computer Society, started in 2021, saw more than 400
             participants enrolling in the first year itself. The chapter has
             since then worked together to enhance and upskill the technical
@@ -21,14 +28,21 @@ const Hero = () => {
             the nation participating to fun events enriching the participants'
             cognitive skills. This year we witnessed over 15 successful events
             held both in the online and offline mode.
-          </p>
-          <Image
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg p-4 rounded-2xl"
-            src="/images/bmsceieeecs.png"
-            width={500}
-            height={500}
-            alt="logo"
-          />
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeIn" }}
+          >
+            <Image
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg p-4 rounded-2xl"
+              src="/images/bmsceieeecs.png"
+              width={500}
+              height={500}
+              alt="logo"
+            />
+          </motion.div>
         </div>
         <Stat />
       </div>

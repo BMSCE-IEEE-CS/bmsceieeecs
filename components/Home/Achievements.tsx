@@ -1,5 +1,6 @@
 import { Montserrat } from "next/font/google";
 import React from "react";
+import { motion } from "framer-motion";
 
 const titleFont = Montserrat({ subsets: ["latin"] });
 
@@ -125,6 +126,7 @@ interface AwardItemProps {
 
 interface AwardCategoryData {
   id: string;
+  idx: number;
   title: React.ReactNode;
   awards: AwardItemProps[];
 }
@@ -168,16 +170,28 @@ const AwardItem = ({
   );
 };
 
-const AwardCategory = ({ title, awards }: AwardCategoryData) => (
+const AwardCategory = ({ title, awards, idx }: AwardCategoryData) => (
   <section className="w-full max-w-6xl mt-10 bg-white/30 backdrop-blur-md rounded-2xl p-8 md:p-4 text-white">
-    <h2 className="text-2xl md:text-3xl md-text-3xl font-semibold text-center text-white mb-7 leading-tight">
+    <motion.h2
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      className="text-2xl md:text-3xl md-text-3xl font-semibold text-center text-white mb-7 leading-tight"
+    >
       {title}
-    </h2>
-    <div className="flex flex-wrap justify-center items-start gap-10 md:gap-6">
+    </motion.h2>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: (idx + 1) * 0.2 }}
+      className="flex flex-wrap justify-center items-start gap-10 md:gap-6"
+    >
       {awards.map((award) => (
         <AwardItem key={award.id} {...award} />
       ))}
-    </div>
+    </motion.div>
   </section>
 );
 
@@ -187,14 +201,18 @@ const Achievements = () => {
       id="achievements"
       className="flex flex-col items-center w-full px-4 py-20"
     >
-      <h1
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
         className={`${titleFont.className} text-orange-400 text-4xl md:text-5xl font-bold text-center`}
       >
         Achievements
-      </h1>
+      </motion.h1>
 
-      {awardCategories.map((category) => (
-        <AwardCategory key={category.id} {...category} />
+      {awardCategories.map((category, idx) => (
+        <AwardCategory idx={idx} key={category.id} {...category} />
       ))}
     </div>
   );

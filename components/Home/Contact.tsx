@@ -6,11 +6,11 @@ import {
   FiUser,
   FiMail,
   FiMessageSquare,
-  FiTwitter,
   FiLinkedin,
   FiGithub,
   FiInstagram,
 } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
   const [loading, setLoading] = useState(false);
@@ -46,17 +46,41 @@ const ContactPage = () => {
 
   return (
     <div id="contact" className="py-10">
-      <div className="relative w-full max-w-lg mx-auto bg-white/15 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-orange-500/30 text-white">
-        <h2 className="text-2xl font-bold text-center text-orange-400 mb-2">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+        className="relative w-full max-w-lg mx-auto bg-white/15 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-orange-500/30 text-white"
+      >
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="text-2xl font-bold text-center text-orange-400 mb-2"
+        >
           Get in Touch
-        </h2>
-        <p className="text-center text-sm text-gray-300 mb-6">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+          className="text-center text-sm text-gray-300 mb-6"
+        >
           Have questions or feedback? Drop us a message and we'll reply soon.
-        </p>
+        </motion.p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.6 }}
+              className="relative"
+            >
               <FiUser className="absolute left-3 top-3 h-5 w-5 text-orange-400" />
               <input
                 type="text"
@@ -65,11 +89,17 @@ const ContactPage = () => {
                 className="w-full pl-10 pr-3 p-3 rounded-xl border border-orange-500/40 bg-black/30 text-white focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder-gray-400"
                 placeholder="Your name"
               />
-            </div>
+            </motion.div>
           </div>
 
           <div>
-            <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.7 }}
+              className="relative"
+            >
               <FiMail className="absolute left-3 top-4 h-5 w-5 text-orange-400" />
               <input
                 type="email"
@@ -78,11 +108,17 @@ const ContactPage = () => {
                 className="w-full pl-10 pr-3 p-3 rounded-xl border border-orange-500/40 bg-black/30 text-white focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder-gray-400"
                 placeholder="Your email"
               />
-            </div>
+            </motion.div>
           </div>
 
           <div>
-            <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.8 }}
+              className="relative"
+            >
               <FiMessageSquare className="absolute left-3 top-3 h-5 w-5 text-orange-400" />
               <textarea
                 name="message"
@@ -91,16 +127,20 @@ const ContactPage = () => {
                 className="w-full pl-10 pr-3 p-3 rounded-xl border border-orange-500/40 bg-black/30 text-white focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder-gray-400 resize-none"
                 placeholder="Write your message..."
               />
-            </div>
+            </motion.div>
           </div>
 
-          <button
+          <motion.button
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 1 }}
             type="submit"
             disabled={loading}
             className="w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 transition text-white font-semibold shadow-lg"
           >
             {loading ? "Sending..." : "Send Message"}
-          </button>
+          </motion.button>
         </form>
 
         {status && (
@@ -113,10 +153,22 @@ const ContactPage = () => {
           </p>
         )}
 
-        <p className="text-gray-300 mt-10">
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 1.2 }}
+          className="text-gray-300 mt-10"
+        >
           You can also reach out via social media or email directly.
-        </p>
-        <div className="mt-6 flex justify-center space-x-6 text-black">
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 1.4 }}
+          className="mt-6 flex justify-center space-x-6 text-black"
+        >
           <Link
             href="https://www.instagram.com/bmsce_ieeecs/"
             target="_blank"
@@ -141,8 +193,8 @@ const ContactPage = () => {
           >
             <FiGithub size={22} />
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

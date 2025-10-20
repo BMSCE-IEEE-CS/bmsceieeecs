@@ -2,6 +2,7 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const title = Montserrat({ subsets: ["latin"] });
 
@@ -12,14 +13,24 @@ const Initiatives = () => {
       className="w-full md:w-5/6 flex flex-col items-center py-20 px-4 text-white"
     >
       <div className="w-full flex flex-col items-center justify-center">
-        <h1
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
           className={`${title.className} text-3xl md:text-5xl font-bold text-orange-400`}
         >
           Initiatives
-        </h1>
+        </motion.h1>
 
         {/* WINGS */}
-        <div className="grid lg:grid-cols-2 gap-10 mt-10 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+          className="grid lg:grid-cols-2 gap-10 mt-10 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl"
+        >
           <div className="max-w-md mx-auto w-full">
             <Image
               className="w-full h-auto"
@@ -51,10 +62,16 @@ const Initiatives = () => {
               Get Started <FaArrowRight />
             </Link> */}
           </div>
-        </div>
+        </motion.div>
 
         {/* CS PROJECT SERIES */}
-        <div className="grid lg:grid-cols-2 gap-10 mt-6 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.6 }}
+          className="grid lg:grid-cols-2 gap-10 mt-6 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl"
+        >
           <div className="flex flex-col order-2 lg:order-1">
             <h1 className="text-orange-400 text-3xl text-center lg:text-left font-bold">
               IEEE CS Project Series
@@ -87,10 +104,16 @@ const Initiatives = () => {
             /> */}
             <h1 className="text-center text-7xl">IEEE CS Project Series</h1>
           </div>
-        </div>
+        </motion.div>
 
         {/* CS REACH */}
-        <div className="grid lg:grid-cols-2 gap-10 mt-6 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.8 }}
+          className="grid lg:grid-cols-2 gap-10 mt-6 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl"
+        >
           <div className="max-w-md mx-auto w-full">
             {/* <Image
               className="w-full h-auto"
@@ -123,7 +146,7 @@ const Initiatives = () => {
               Become a volunteer <FaArrowRight />
             </Link> */}
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
