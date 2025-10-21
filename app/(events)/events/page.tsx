@@ -98,7 +98,7 @@ const Events = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: (idx + 1) * 0.2 }}
+              transition={{ duration: 0.2, delay: (idx + 1) * 0.2 }}
               key={tab.id}
               onClick={() => setCurrent(tab.id)}
               className={`rounded-xl px-4 py-2 font-bold text-xl backdrop-blur-md cursor-pointer transition-all duration-150 ${
@@ -115,7 +115,7 @@ const Events = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 1 }}
+          transition={{ duration: 0.4, delay: 1.4 }}
           className="bg-slate-300 h-0.5 w-full mt-6"
         ></motion.div>
         <div className="flex flex-col items-center justify-center mt-10">
