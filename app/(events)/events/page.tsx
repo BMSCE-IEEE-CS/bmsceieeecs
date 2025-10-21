@@ -42,8 +42,6 @@ const Events = () => {
       dateObj: new Date(e.date),
     }));
 
-    console.log(events);
-
     switch (current) {
       case 0:
         return events.filter((e) => e.dateObj >= now);
