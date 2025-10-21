@@ -11,6 +11,7 @@ const Loader = () => {
           height={100}
           alt="loadericon"
           className="rounded-full"
+          priority
         />
       </div>
     </div>

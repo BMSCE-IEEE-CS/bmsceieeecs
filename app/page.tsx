@@ -11,6 +11,7 @@ import Beam from "@/components/bg/Beam/Beam";
 import Footer from "@/components/Home/Footer";
 import ContactPage from "@/components/Home/Contact";
 import Achievements from "@/components/Home/Achievements";
+import Gallery from "@/components/Home/Gallery";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -64,6 +65,7 @@ export default function Home() {
       <Hero />
       <About />
       <Team />
+      <Gallery />
       <Initiatives />
       <Achievements />
       <ContactPage />

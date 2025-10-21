@@ -437,7 +437,7 @@ const TeamComponent = ({
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: (id ?? 0 + 1) * 0.3 }}
+      transition={{ duration: 0.5, delay: (id ?? 0 + 1) * 0.2 }}
       id="team"
       className="p-4 bg-white/30 backdrop-blur-md rounded-xl w-72 flex flex-col items-center shadow-2xl text-white"
     >

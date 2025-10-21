@@ -22,6 +22,7 @@ const Navbar = () => {
             width={128}
             height={128}
             alt="Logo"
+            priority
           />
         </div>
 
@@ -38,6 +39,9 @@ const Navbar = () => {
 
           <Link href="/#team" className="hover:underline underline-offset-2">
             Team
+          </Link>
+          <Link href="/#gallery" className="hover:underline underline-offset-2">
+            Gallery
           </Link>
           <Link
             href="/#initiatives"
@@ -76,7 +80,7 @@ const Navbar = () => {
             &times;
           </button>
 
-          <Link href="#" onClick={() => setMenuOpen(false)}>
+          <Link href="/" onClick={() => setMenuOpen(false)}>
             Home
           </Link>
 
@@ -88,6 +92,9 @@ const Navbar = () => {
           </Link>
           <Link href="/#team" onClick={() => setMenuOpen(false)}>
             Team
+          </Link>
+          <Link href="/#gallery" onClick={() => setMenuOpen(false)}>
+            Gallery
           </Link>
           <Link href="/#initiatives" onClick={() => setMenuOpen(false)}>
             Initiatives
