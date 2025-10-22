@@ -95,14 +95,14 @@ const Initiatives = () => {
             </Link> */}
           </div>
           <div className="max-w-md mx-auto w-full order-1 md:order-2">
-            {/* <Image
+            { <Image
               className="w-full h-auto"
-              src="/images/wings.png"
+              src="/images/csps.png"
               width={500}
               height={500}
-              alt="wings"
-            /> */}
-            <h1 className="text-center text-7xl">IEEE CS Project Series</h1>
+              alt="project series"
+            /> }
+            
           </div>
         </motion.div>
 
