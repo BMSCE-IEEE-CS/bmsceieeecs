@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  cursor: none !important;
+}
+
 @layer utilities {
   .clip-path-hero {
     clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
