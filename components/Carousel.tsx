@@ -6,6 +6,7 @@ const topImages = [
   { src: "/images/carousel/cymaplog.jpg", caption: "Cymaplog 3.0" },
   { src: "/images/carousel/techx.jpg", caption: "TechX Bangalore 2024" },
   { src: "/images/carousel/sheleads.jpg", caption: "SheLeads" },
+  { src: "/images/carousel/hackaphasia25.jpg", caption: "Hackaphasia 3.0" },
 ];
 
 const bottomImages = [
