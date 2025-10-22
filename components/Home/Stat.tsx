@@ -42,7 +42,7 @@ const StatComponent = ({
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.8, ease: "easeIn", delay: (id + 1) * 0.3 }}
+      transition={{ duration: 0.4, ease: "easeIn", delay: (id + 1) * 0.2 }}
       ref={ref}
       className="bg-white/30 flex flex-col items-center px-8 py-4 rounded-xl backdrop-blur-md"
     >

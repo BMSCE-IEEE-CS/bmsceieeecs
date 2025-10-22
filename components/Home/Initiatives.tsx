@@ -28,7 +28,7 @@ const Initiatives = () => {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="grid lg:grid-cols-2 gap-10 mt-10 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl"
         >
           <div className="max-w-md mx-auto w-full">
@@ -69,11 +69,11 @@ const Initiatives = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.6 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
           className="grid lg:grid-cols-2 gap-10 mt-6 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl"
         >
           <div className="flex flex-col order-2 lg:order-1">
-            <h1 className="text-orange-400 text-3xl text-center lg:text-left font-bold">
+            <h1 className="text-orange-400 text-3xl text-center lg:text-left font-bold select-none">
               IEEE CS Project Series
             </h1>
             <p className="text-lg text-justify mt-2 items-center lg:items-start">
@@ -111,18 +111,18 @@ const Initiatives = () => {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.8 }}
+          transition={{ duration: 0.4, delay: 0.6 }}
           className="grid lg:grid-cols-2 gap-10 mt-6 items-center bg-white/30 backdrop-blur-md p-6 rounded-2xl"
         >
           <div className="max-w-md mx-auto w-full">
-            {/* <Image
+            <Image
               className="w-full h-auto"
-              src="/images/wings.png"
+              src="/images/csreach.png"
               width={500}
               height={500}
               alt="wings"
-            /> */}
-            <h1 className="text-center text-7xl">CS Reach</h1>
+            />
+            {/* <h1 className="text-center text-7xl">CS Reach</h1> */}
           </div>
           <div className="flex flex-col">
             <h1 className="text-orange-400 text-3xl text-center lg:text-left font-bold">
