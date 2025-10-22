@@ -3,18 +3,17 @@ import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CustomCursor() {
+  const [mounted, setMounted] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
-    const checkTouch = () => {
-      if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
-        setIsTouchDevice(true);
-      }
-    };
-    checkTouch();
+    setMounted(true);
+    if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+      setIsTouchDevice(true);
+    }
   }, []);
 
-  if (isTouchDevice) return null;
+  if (!mounted || isTouchDevice) return null;
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
