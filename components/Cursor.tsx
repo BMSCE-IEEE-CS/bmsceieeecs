@@ -3,10 +3,24 @@ import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CustomCursor() {
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    const checkTouch = () => {
+      if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+        setIsTouchDevice(true);
+      }
+    };
+    checkTouch();
+  }, []);
+
+  if (isTouchDevice) return null;
+
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  const springX = useSpring(mouseX, { stiffness: 180, damping: 18 });
-  const springY = useSpring(mouseY, { stiffness: 180, damping: 18 });
+  const springX = useSpring(mouseX, { stiffness: 420, damping: 24 });
+  const springY = useSpring(mouseY, { stiffness: 420, damping: 24 });
+
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
@@ -71,9 +85,9 @@ export default function CustomCursor() {
         transition={{ repeat: Infinity, duration: 1 }}
       />
 
-      {[0, 1, 2].map((i, idx) => (
+      {[0, 1, 2].map((i) => (
         <motion.div
-          key={idx}
+          key={i}
           className="absolute rounded-full border border-orange-400/80"
           style={{
             width: `${16 + i * 12}px`,
