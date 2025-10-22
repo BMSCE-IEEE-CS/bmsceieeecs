@@ -20,14 +20,7 @@ const Hero = () => {
             transition={{ duration: 0.8, ease: "easeIn", delay: 0.2 }}
             className="text-justify text-sm sm:text-lg lg:w-1/2"
           >
-            BMSCE IEEE Computer Society, started in 2021, saw more than 400
-            participants enrolling in the first year itself. The chapter has
-            since then worked together to enhance and upskill the technical
-            knowledge of its members. The events covered a variety of fields
-            from the national level hackathons which saw tech enthusiasts around
-            the nation participating to fun events enriching the participants'
-            cognitive skills. This year we witnessed over 15 successful events
-            held both in the online and offline mode.
+            Established in 2021, BMSCE IEEE Computer Society quickly became a central hub for tech enthusiasts, attracting over 400 participants in its first year. Our core mission is to enhance and upskill the technical knowledge of our members, empowering them to become future leaders in computing. Through a dynamic mix of events - from <b> national-level hackathons to insightful workshops</b>, we foster a space for dialogue and innovation. Today, our chapter is a thriving community that has been recognized for its impact and contributions.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 50 }}

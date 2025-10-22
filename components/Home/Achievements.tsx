@@ -11,7 +11,7 @@ const awardCategories = [
     awards: [
       {
         id: "global-award-2024",
-        imageSrc: "/images/awards/2024_3.png",
+        imageSrc: "/images/awards/2024_3.jpeg",
         caption: (
           <>
             Outstanding Chapter Global Award 2024
@@ -25,7 +25,7 @@ const awardCategories = [
       },
       {
         id: "techx-2024",
-        imageSrc: "/images/awards/2024_2.png",
+        imageSrc: "/images/awards/2024_2.jpeg",
         caption: (
           <>
             TechX 2024 Outstanding Host - 1st Place
@@ -70,7 +70,7 @@ const awardCategories = [
       },
       {
         id: "csbc-2023",
-        imageSrc: "/images/awards/2023_2.png",
+        imageSrc: "/images/awards/2023_2.jpeg",
         caption: "2023",
         altText: "Outstanding Student Chapter 2023",
       },
@@ -88,13 +88,13 @@ const awardCategories = [
     awards: [
       {
         id: "stellar-2024",
-        imageSrc: "/images/awards/2024_4.png",
+        imageSrc: "/images/awards/2024_4.jpeg",
         caption: "Stellar Execom Volunteer Award 2024",
         altText: "Stellar Execom Volunteer Award 2024",
       },
       {
         id: "osv-2024",
-        imageSrc: "/images/awards/2024_5.png",
+        imageSrc: "/images/awards/2024_5.jpeg",
         caption: "Outstanding Student Volunteer 2024",
         altText: "Outstanding Student Volunteer 2024",
       },
