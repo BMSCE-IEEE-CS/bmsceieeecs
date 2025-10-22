@@ -54,8 +54,8 @@ const StatComponent = ({
 
 const Stat = () => {
   const statData = [
-    { value: 1084, text: "Members" },
-    { value: 70, text: "Events" },
+    { value: 2144, text: "Members" },
+    { value: 75, text: "Events" },
     { value: 6, text: "Prestigious Awards" },
   ];
   return (
