@@ -86,7 +86,7 @@ const ContactPage = () => {
                 type="text"
                 name="mName"
                 required
-                className="w-full pl-10 pr-3 p-3 rounded-xl border border-orange-500/40 bg-black/30 text-white focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder-gray-400"
+                className="w-full pl-10 pr-3 p-2 rounded-xl border border-orange-500/40 bg-black/30 text-white focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder-gray-400"
                 placeholder="Your name"
               />
             </motion.div>
@@ -100,12 +100,12 @@ const ContactPage = () => {
               transition={{ duration: 0.4, delay: 0.7 }}
               className="relative"
             >
-              <FiMail className="absolute left-3 top-4 h-5 w-5 text-orange-400" />
+              <FiMail className="absolute left-3 top-3 h-5 w-5 text-orange-400" />
               <input
                 type="email"
                 name="email"
                 required
-                className="w-full pl-10 pr-3 p-3 rounded-xl border border-orange-500/40 bg-black/30 text-white focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder-gray-400"
+                className="w-full pl-10 pr-3 p-2 rounded-xl border border-orange-500/40 bg-black/30 text-white focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder-gray-400"
                 placeholder="Your email"
               />
             </motion.div>
@@ -119,7 +119,7 @@ const ContactPage = () => {
               transition={{ duration: 0.4, delay: 0.8 }}
               className="relative"
             >
-              <FiMessageSquare className="absolute left-3 top-3 h-5 w-5 text-orange-400" />
+              <FiMessageSquare className="absolute left-3 top-4 h-5 w-5 text-orange-400" />
               <textarea
                 name="message"
                 rows={4}

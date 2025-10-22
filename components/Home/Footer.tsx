@@ -31,14 +31,21 @@ const Footer = () => {
               <Link className="hover:underline text-lg" href="#about">
                 About
               </Link>
+              <Link className="hover:underline text-lg" href="/events">
+                Events
+              </Link>
               <Link className="hover:underline text-lg" href="#team">
                 Team
+              </Link>
+              <Link className="hover:underline text-lg" href="#gallery">
+                Gallery
               </Link>
               <Link className="hover:underline text-lg" href="#initiatives">
                 Initiatives
               </Link>
-              <Link className="hover:underline text-lg" href="/events">
-                Events
+
+              <Link className="hover:underline text-lg" href="#achievements">
+                Achievements
               </Link>
               <Link className="hover:underline text-lg" href="#contact">
                 Contact Us
