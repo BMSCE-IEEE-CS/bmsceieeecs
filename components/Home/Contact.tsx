@@ -45,7 +45,7 @@ const ContactPage = () => {
   }
 
   return (
-    <div id="contact" className="py-10">
+    <div id="contact" className="py-10 px-4">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

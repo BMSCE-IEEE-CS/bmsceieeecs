@@ -17,7 +17,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeIn", delay: 0.2 }}
+            transition={{ duration: 0.4, ease: "easeIn", delay: 0.2 }}
             className="text-justify text-sm sm:text-lg lg:w-1/2"
           >
             BMSCE IEEE Computer Society, started in 2021, saw more than 400
@@ -33,7 +33,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeIn" }}
+            transition={{ duration: 0.4, ease: "easeIn" }}
           >
             <Image
               className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg p-4 rounded-2xl"

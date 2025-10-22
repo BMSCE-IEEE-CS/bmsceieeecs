@@ -437,7 +437,7 @@ const TeamComponent = ({
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: (id ?? 0 + 1) * 0.2 }}
+      transition={{ duration: 0.3, delay: (id ?? 0 + 1) * 0.1 }}
       id="team"
       className="p-4 bg-white/30 backdrop-blur-md rounded-xl w-72 flex flex-col items-center shadow-2xl text-white"
     >
@@ -493,7 +493,7 @@ const Team = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: (idx + 1) * 0.2 }}
+              transition={{ duration: 0.2, delay: (idx + 1) * 0.1 }}
               key={y}
               onClick={() => setYear(y)}
               className={`px-4 py-2 border-2 border-orange-400 font-semibold rounded-lg transition-all duration-300 text-lg ${
@@ -511,7 +511,7 @@ const Team = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.4 }}
+              transition={{ duration: 0.2, delay: 0.2 }}
               className={`${title.className} text-3xl text-orange-400 text-center mt-10 font-bold`}
             >
               Core Committee
@@ -537,7 +537,7 @@ const Team = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.4 }}
+              transition={{ duration: 0.2, delay: 0.3 }}
               className={`${title.className} text-3xl text-orange-400 text-center mt-14 font-bold`}
             >
               Student Activities Committee Coordinators

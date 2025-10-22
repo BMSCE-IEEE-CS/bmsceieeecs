@@ -24,7 +24,7 @@ const AboutComponent = ({
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: (id + 1) * 0.4 }}
+      transition={{ duration: 0.4, delay: (id + 1) * 0.2 }}
       className="flex flex-col items-center justify-center text-black p-4 mt-10 text-lg text-justify bg-white/30 backdrop-blur-md rounded-xl"
     >
       <div className="text-5xl text-white">{icon}</div>
@@ -65,7 +65,7 @@ const About = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.2 }}
           className={`${title.className} text-orange-400 text-4xl md:text-5xl font-bold text-center`}
         >
           About Us
@@ -74,7 +74,7 @@ const About = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
           className="text-white  p-4 mt-10 text-lg text-justify bg-white/30 backdrop-blur-md rounded-xl"
         >
           Engaging engineers from various streams along with scientists and
