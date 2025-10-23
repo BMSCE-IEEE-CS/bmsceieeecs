@@ -6,6 +6,13 @@ export default function CustomCursor() {
   const [mounted, setMounted] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
+  // ✅ Hooks must always run
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const springX = useSpring(mouseX, { stiffness: 420, damping: 24 });
+  const springY = useSpring(mouseY, { stiffness: 420, damping: 24 });
+  const [isHovering, setIsHovering] = useState(false);
+
   useEffect(() => {
     setMounted(true);
     if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
@@ -13,14 +20,8 @@ export default function CustomCursor() {
     }
   }, []);
 
+  // 🧠 Only control rendering here — not hook calls
   if (!mounted || isTouchDevice) return null;
-
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const springX = useSpring(mouseX, { stiffness: 420, damping: 24 });
-  const springY = useSpring(mouseY, { stiffness: 420, damping: 24 });
-
-  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     const move = (e: MouseEvent) => {
@@ -47,7 +48,7 @@ export default function CustomCursor() {
       window.removeEventListener("mouseover", handleMouseOver);
       window.removeEventListener("mouseout", handleMouseOut);
     };
-  }, []);
+  }, [mouseX, mouseY]);
 
   return (
     <motion.div

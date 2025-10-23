@@ -20,7 +20,7 @@ export default function RootLayout({
     <html className="scroll-smooth" lang="en">
       <body className={`${font.className} antialiased text-white bg-gray-800`}>
         <Providers>
-          <CustomCursor />
+          {/* <CustomCursor /> */}
           {children}
         </Providers>
       </body>

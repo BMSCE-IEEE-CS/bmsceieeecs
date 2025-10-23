@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-* {
+/* * {
   cursor: none !important;
 }
 
@@ -8,7 +8,7 @@
   * {
     cursor: auto !important;
   }
-}
+} */
 
 @layer utilities {
   .clip-path-hero {
