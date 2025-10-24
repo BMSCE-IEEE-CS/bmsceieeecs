@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-start w-full">
           <div className="flex flex-col items-center">
-            <h1 className="text-3xl font-bold">Site Map</h1>
+            <h1 className="text-3xl font-bold">Quick Links</h1>
             <div className="mt-4 flex flex-col gap-2">
               <Link className="hover:underline text-lg" href="/">
                 Home
