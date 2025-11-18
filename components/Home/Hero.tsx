@@ -41,6 +41,26 @@ const Hero = () => {
         <Stat />
       </div>
 
+      <h2 className="text-3xl font-bold mb-4"><i>HAPPENING NOW!</i></h2>
+      <div className="flex flex-col items-center justify-center w-full py-4 text-white">
+        <Image
+          src="/images/osw.png" 
+          alt="Happening Now!"
+          width={600}
+          height={600}
+          className="mb-10"
+        />
+        
+        <Link
+          href="https://osweek.bmsceieeecs.in" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 bg-orange-500/60 text-white font-semibold rounded-lg hover:bg-orange-500 transition"
+        >
+          Visit Website
+        </Link>
+      </div>
+
       <Link
         href="#about"
         className="absolute bottom-6 animate-bounce p-3 rounded-full bg-white text-black hover:shadow-xl transition"

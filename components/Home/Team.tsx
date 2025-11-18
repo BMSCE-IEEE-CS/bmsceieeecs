@@ -375,7 +375,7 @@ const teamData: Record<number, TeamCatProps[]> = {
             "https://www.linkedin.com/in/tanisha-prakash-78a644312/",
         },
       ],
-      sac: [
+      /*sac: [
         {
           name: "Aditya N",
           desig: "SAC",
@@ -420,7 +420,7 @@ const teamData: Record<number, TeamCatProps[]> = {
           image: "/images/people/2026/vaibhav.png",
           linkedinLink: "https://linkedin.com/in/vaibhav-reddy-982b0a25b",
         },
-      ],
+      ]*/
     },
   ],
 };
