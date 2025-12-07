@@ -20,7 +20,15 @@ const Hero = () => {
             transition={{ duration: 0.4, ease: "easeIn", delay: 0.2 }}
             className="text-justify text-sm sm:text-lg lg:w-1/2"
           >
-            Established in 2021, BMSCE IEEE Computer Society quickly became a central hub for tech enthusiasts, attracting over 400 participants in its first year. Our core mission is to enhance and upskill the technical knowledge of our members, empowering them to become future leaders in computing. Through a dynamic mix of events - from <b> national-level hackathons to insightful workshops</b>, we foster a space for dialogue and innovation. Today, our chapter is a thriving community that has been recognized for its impact and contributions.
+            Established in 2021, BMSCE IEEE Computer Society quickly became a
+            central hub for tech enthusiasts, attracting over 400 participants
+            in its first year. Our core mission is to enhance and upskill the
+            technical knowledge of our members, empowering them to become future
+            leaders in computing. Through a dynamic mix of events - from{" "}
+            <b> national-level hackathons to insightful workshops</b>, we foster
+            a space for dialogue and innovation. Today, our chapter is a
+            thriving community that has been recognized for its impact and
+            contributions.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -39,26 +47,6 @@ const Hero = () => {
           </motion.div>
         </div>
         <Stat />
-      </div>
-
-      <h2 className="text-3xl font-bold mb-4"><i>HAPPENING NOW!</i></h2>
-      <div className="flex flex-col items-center justify-center w-full py-4 text-white">
-        <Image
-          src="/images/osw.png" 
-          alt="Happening Now!"
-          width={600}
-          height={600}
-          className="mb-10"
-        />
-        
-        <Link
-          href="https://osweek.bmsceieeecs.in" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-3 bg-orange-500/60 text-white font-semibold rounded-lg hover:bg-orange-500 transition"
-        >
-          Visit Website
-        </Link>
       </div>
 
       <Link
