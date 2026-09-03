@@ -423,6 +423,62 @@ const teamData: Record<number, TeamCatProps[]> = {
       ]*/
     },
   ],
+  "2026": [
+    {
+      execom: [
+        {
+          name: "V C Mohit",
+          desig: "Chairperson",
+          image: "/images/people/2026/mohit.jpeg",
+          linkedinLink: "https://www.linkedin.com/in/v-c-mohit-rao",
+        },
+        {
+          name: "Saketh M S",
+          desig: "Vice Chairperson",
+          image: "/images/people/2026/saketh.jpeg",
+          linkedinLink: "https://www.linkedin.com/in/saketh-ms-168a88339",
+        },
+        {
+          name: "Malyala Sonika",
+          desig: "Secretary",
+          image: "/images/people/2026/sonika.jpeg",
+          linkedinLink: "https://www.linkedin.com/in/malyala-sonika-295497340",
+        },
+        {
+          name: "Prathvin Devadiga",
+          desig: "Joint Secretary",
+          image: "/images/people/2026/prathvin.jpeg",
+          linkedinLink: "https://www.linkedin.com/in/prathvindevadiga",
+        },
+        {
+          name: "Abhinav M",
+          desig: "Joint Secretary",
+          image: "/images/people/2026/abhinav.jpeg",
+          linkedinLink: "https://www.linkedin.com/in/abhinav-matta-9a462a266",
+        },
+        {
+          name: "Pawan Kuamar P",
+          desig: "Treasurer",
+          image: "/images/people/2026/pawan.jpeg",
+          linkedinLink: "https://www.linkedin.com/in/pawan-kumar-p-075467332",
+        },
+        {
+          name: "Harshal Jain",
+          desig: "Tech Lead",
+          image: "/images/people/2026/harshal-jain.webp",
+          linkedinLink: "https://www.linkedin.com/in/harshal--gandhi",
+        },
+        {
+          name: "Md Aqudam Azimee",
+          desig: "Tech Lead",
+          image: "/images/people/2026/aqudam.jpeg",
+          linkedinLink: "https://www.linkedin.com/in/md-aqudam-azimee-4958b9332",
+        },
+      ],
+    },
+  ],
+
+
 };
 
 const TeamComponent = ({
@@ -461,8 +517,8 @@ const TeamComponent = ({
 };
 
 const Team = () => {
-  const [year, setYear] = useState<number>(2025);
-  const years = [2025, 2024, 2023, 2022, 2021];
+  const [year, setYear] = useState<number>(2026);
+  const years = [2026, 2025, 2024, 2023, 2022, 2021];
 
   const yearData = teamData[year]?.[0];
 
@@ -496,9 +552,8 @@ const Team = () => {
               transition={{ duration: 0.2, delay: (idx + 1) * 0.1 }}
               key={y}
               onClick={() => setYear(y)}
-              className={`px-4 py-2 border-2 border-orange-400 font-semibold rounded-lg transition-all duration-300 text-lg ${
-                year === y ? "bg-orange-400 text-black" : "text-white"
-              }`}
+              className={`px-4 py-2 border-2 border-orange-400 font-semibold rounded-lg transition-all duration-300 text-lg ${year === y ? "bg-orange-400 text-black" : "text-white"
+                }`}
             >
               {y}
             </motion.button>
