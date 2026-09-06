@@ -465,7 +465,7 @@ const teamData: Record<number, TeamCatProps[]> = {
         {
           name: "Harshal Jain",
           desig: "Tech Lead",
-          image: "/images/people/2026/harshal-jain.webp",
+          image: "/images/people/2026/harshal.jpeg",
           linkedinLink: "https://www.linkedin.com/in/harshal--gandhi",
         },
         {
