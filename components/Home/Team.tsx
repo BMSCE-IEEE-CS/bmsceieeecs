@@ -427,7 +427,7 @@ const teamData: Record<number, TeamCatProps[]> = {
     {
       execom: [
         {
-          name: "V C Mohit",
+          name: "V C Mohit Rao",
           desig: "Chairperson",
           image: "/images/people/2026/mohit.jpeg",
           linkedinLink: "https://www.linkedin.com/in/v-c-mohit-rao",
