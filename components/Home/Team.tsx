@@ -469,7 +469,7 @@ const teamData: Record<number, TeamCatProps[]> = {
           linkedinLink: "https://www.linkedin.com/in/harshal--gandhi",
         },
         {
-          name: "Md Aqudam Azimee",
+          name: "Aqudam Azimee",
           desig: "Tech Lead",
           image: "/images/people/2026/aqudam.jpeg",
           linkedinLink: "https://www.linkedin.com/in/md-aqudam-azimee-4958b9332",
