@@ -9,6 +9,13 @@ const CYBER_MONTH_ORIGIN = "https://ieeecs-cybermonth.vercel.app";
 const CS_BITS_ORIGIN = "https://cs-bits-2026.vercel.app";
 
 const nextConfig: NextConfig = {
+  // Short, shareable links to the Parallax hackathon page.
+  async redirects() {
+    return [
+      { source: "/parallax", destination: "/cybermonth/events/parallax-hackathon", permanent: false },
+      { source: "/hackathon", destination: "/cybermonth/events/parallax-hackathon", permanent: false },
+    ];
+  },
   async rewrites() {
     return [
       { source: "/cybermonth", destination: `${CYBER_MONTH_ORIGIN}/cybermonth` },
