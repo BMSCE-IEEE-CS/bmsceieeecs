@@ -2,8 +2,15 @@ import SquareBg from "@/components/bg/Squares/Square";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Events | BMSCE IEEE Computer Society",
-  description: "Events by BMSCE IEEE Computer Society",
+  title: "Events | BMSCE IEEE Computer Society, Bengaluru",
+  description:
+    "Hackathons, workshops, talks and competitions by BMSCE IEEE Computer Society at BMS College of Engineering, Bengaluru, from 2021 to today, including Parallax, a 24-hour national-level cybersecurity hackathon.",
+  openGraph: {
+    images: ["/og.jpg"],
+    title: "Events | BMSCE IEEE Computer Society, Bengaluru",
+    description:
+      "Hackathons, workshops, talks and competitions by BMSCE IEEE Computer Society at BMS College of Engineering, Bengaluru, from 2021 to today, including Parallax, a 24-hour national-level cybersecurity hackathon.",
+  },
 };
 
 export default function EventsLayout({

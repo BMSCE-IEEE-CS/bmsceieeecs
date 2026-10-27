@@ -1,0 +1,40 @@
+# BMSCE IEEE Computer Society
+
+> BMSCE IEEE Computer Society (BMSCE IEEE CS) is the IEEE Computer Society student branch chapter of BMS College of Engineering (BMSCE), Bull Temple Road, Basavanagudi, Bengaluru (Bangalore), Karnataka, India. Established in 2021, it runs national-level hackathons, hands-on workshops, expert talks and outreach for engineering students, with 2,100+ members, 75+ events and 6 awards.
+
+## Now: Parallax hackathon (30–31 October 2026)
+
+Parallax is a 24-hour national-level cybersecurity hackathon organised by BMSCE IEEE Computer Society as the flagship event of Cyber Month 2026.
+
+- When: 4:00 PM IST, Friday 30 October 2026 to 4:00 PM IST, Saturday 31 October 2026
+- Mode: hybrid, offline at BMS College of Engineering, Bengaluru, or online from anywhere in India
+- Prize pool: ₹40,000
+- Teams: 2 to 4 members, open to students from all colleges
+- Registration fee: offline ₹310 (IEEE members) or ₹450 (non-members); online ₹200 (IEEE members) or ₹290 (non-members)
+- Food: provided
+- Details and FAQ: https://www.bmsceieeecs.in/cybermonth/events/parallax-hackathon
+- Short link: https://www.bmsceieeecs.in/parallax
+- Registration form: https://forms.gle/zVmK961gykk4bFa88
+
+## Cyber Month 2026 (17 October – 3 November 2026)
+
+A month of cybersecurity talks, workshops, competitions, a Capture The Flag (CTF) and the Parallax hackathon, run by BMSCE IEEE Computer Society with the partner clubs IEEE EMBS, IEEE WIE, IEEE PES, IEEE PELS & IES, Gradient, OS Code and Singularity.
+
+- [Cyber Month 2026](https://www.bmsceieeecs.in/cybermonth): full lineup and schedule
+- [Cyber Month for AI assistants](https://www.bmsceieeecs.in/cybermonth/llms.txt): every event with dates, clubs and links
+
+## Pages
+
+- [Home](https://www.bmsceieeecs.in/): about the chapter, team, gallery, initiatives, achievements and contact
+- [Events](https://www.bmsceieeecs.in/events): every event the chapter has run since 2021, and upcoming ones
+- [CS BITS 2026](https://www.bmsceieeecs.in/bits)
+- [WINGS](https://www.bmsceieeecs.in/wings): a chapter initiative
+- [CS Project Series](https://www.bmsceieeecs.in/ieeecsps): hands-on student projects
+- [CS Reach](https://www.bmsceieeecs.in/csreach): outreach introducing school students to computer science
+
+## Contact
+
+- Email: ieee.cs@bmsce.ac.in
+- LinkedIn: https://www.linkedin.com/company/bmsce-ieee-computer-society/
+- Instagram: https://www.instagram.com/bmsce_ieeecs/
+- GitHub: https://github.com/BMSCE-IEEE-CS
