@@ -16,9 +16,9 @@ Parallax is a 24-hour national-level cybersecurity hackathon organised by BMSCE 
 - Short link: https://www.bmsceieeecs.in/parallax
 - Registration form: https://forms.gle/zVmK961gykk4bFa88
 
-## Cyber Month 2026 (17 October – 3 November 2026)
+## Cyber Month 2026 (17 October – 5 November 2026)
 
-A month of cybersecurity talks, workshops, competitions, a Capture The Flag (CTF) and the Parallax hackathon, run by BMSCE IEEE Computer Society with the partner clubs IEEE EMBS, IEEE WIE, IEEE PES, IEEE PELS & IES, Gradient, OS Code and Singularity.
+A month of cybersecurity talks, workshops, competitions, a Capture The Flag (CTF) and the Parallax hackathon, run by BMSCE IEEE Computer Society with the partner clubs IEEE EMBS, IEEE WIE, IEEE PES & SC, IEEE PELS & IES, Gradient, OS Code, Singularity and Sensored. Registrations are open for Parallax, Cyber Siege, Don't Trust the Systems and ONLYCTF (workshop 29 October, competition 5 November).
 
 - [Cyber Month 2026](https://www.bmsceieeecs.in/cybermonth): full lineup and schedule
 - [Cyber Month for AI assistants](https://www.bmsceieeecs.in/cybermonth/llms.txt): every event with dates, clubs and links
