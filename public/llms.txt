@@ -7,11 +7,11 @@
 Parallax is a 24-hour national-level cybersecurity hackathon organised by BMSCE IEEE Computer Society as the flagship event of Cyber Month 2026.
 
 - When: 4:00 PM IST, Friday 30 October 2026 to 4:00 PM IST, Saturday 31 October 2026
-- Mode: hybrid, offline at BMS College of Engineering, Bengaluru, or online from anywhere in India
+- Mode: hybrid. Each team takes part either fully offline at BMS College of Engineering, Bengaluru, or fully online from anywhere in India (a team cannot split between modes)
 - Prize pool: ₹40,000
-- Teams: 2 to 4 members, open to students from all colleges
-- Registration fee: offline ₹310 (IEEE members) or ₹450 (non-members); online ₹200 (IEEE members) or ₹290 (non-members)
-- Food: provided
+- Teams: 2 to 4 members, open to students from any college; a team can mix members from different colleges
+- Registration fee (per team, not per person): offline ₹310 if the team has at least one IEEE member, otherwise ₹450; online ₹200 if the team has at least one IEEE member, otherwise ₹290
+- Food: provided for teams taking part offline
 - Details and FAQ: https://www.bmsceieeecs.in/cybermonth/events/parallax-hackathon
 - Short link: https://www.bmsceieeecs.in/parallax
 - Registration form: https://forms.gle/zVmK961gykk4bFa88
